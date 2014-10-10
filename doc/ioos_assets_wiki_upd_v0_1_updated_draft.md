@@ -1,6 +1,4 @@
-<!-- IOOS Conventions for Observing Asset Identifiers   -->
-
-<pre style="color:red"> This is a DRAFT version of the document; needs further edition and format</pre>
+<!-- IOOS Conventions for Observing Asset Identifiers -->
 
 Authors: Jeff de La Beaujardière, NOAA/NESDIS/Technology Planning and Integration Office<br>
 Contributors: Derrick Snowden, Carmel Ortiz, and Alex Birger, U.S. IOOS Office; Anna Milan, Metadata Specialist at NOAA National Geophysical Data Center (NGDC).
@@ -17,8 +15,8 @@ Many assets have numbers or labels assigned to them by an external authority. Fo
 | Version | Description | Date |
 |---------|-------------|----- |
 |0.0.1|First draft.|2010-12-22 |
-|0.1  |Updated draft|2013-12-06 | |
-|  |  |
+|0.1  |Updated draft|2013-12-06 |
+| 0.9 | Updated for Milestone 1.0 | 2014-08-31 |
 
 <br>
 <br>
@@ -173,57 +171,40 @@ Currently, IOOS Conventions do not regulate asset versioning; therefore, no requ
 
 ## Survey Identifiers ##
 
-(To be discussed)
+A survey identifier URN includes the _**authority**_ and _**label**_ fields of the station or a ship, and a _**component**_ field to distinguish it from other surveys at the same station or ship:
 
-## Visual Observations from Ships ##
+_**urn:ioos:survey:authority:label[:component]**_
 
-(this is probably the same as survey identifiers)
+For visual observation purpose, the _**authority**_,  _**label**_, and _**component**_ fields may also indicate either (1) the general observing protocol or (2) the specific type of observation. 
 
-Observer (i.e. _**urn:ioos:observer:...**_) seems just as good as other choices. 
+### _General observing protocol_ ###
 
-I think it would be good to also indicate either (1) the general observing protocol or (2) the specific type of observation, as follows: 
+If visual estimates are made according to some established observing protocol, then the _**authority**_ field may contain a reference to the document that describes the protocol. For example, if observation was made by the [NWS Observing Handbook No. 1 (2004)](http://www.vos.noaa.gov/ObsHB-508/ObservingHandbook1_2004_508_compliant.pdf), then the survey identifier will look as follows:
 
-#### _(1) General observing protocol_ ####
+_**urn:ioos:survey:nws_observing_handbook_2004:label[:component]**_ 
 
-If visual estimates are made according to, for example, the [NWS Observing Handbook No. 1 (2004)](http://www.vos.noaa.gov/ObsHB-508/ObservingHandbook1_2004_508_compliant.pdf), then perhaps the so-called “sensor” ID could be something like 
+If a simple reference to the document is sufficient to avoid any need for additional interpretation, it is acceptable to identify the survey with just the URL of the document describing the observing protocol, laboratory procedures, etc. In the case of the NWS Observing Handbook, for example, the following URL may play a role of the survey ID:
 
-_**<urn:ioos:observer:nws_observing_handbook:2004>**_
+_**http://www.vos.noaa.gov/ObsHB-508/ObservingHandbook1_2004_508_compliant.pdf**_
 
-Indeed, instead of inventing our own URI for this case perhaps we should just insert the URL of the observing protocol: 
+### _Specific type of observation_ ####
 
-http://www.vos.noaa.gov/ObsHB-508/ObservingHandbook1_2004_508_compliant.pdf
+The survey identifier may include the type of observation made by the human. For example, in the NWS Handbook, Chapter 2, page 2-7 says that "iw" is the "wind speed indicator", and that it has values 0, 1, 3, 4 depending on how the wind speed was estimated or measured, with "3" being "wind speed estimated in knots." For such an observation, the survey identifier may use the observation code instead of _**authority**_,  _**label**_, and _**component**_ fields:  
 
-This avoids any need for additional interpretation. In the IOOS water quality project we have seen another case where the “metadata” about the measurement procedure is a PDF file containing descriptions of laboratory procedures. 
+_**urn:ioos:survey:iw:3**_
 
-#### _(2) Specific type of observation_ ####
+or in a more verbose manner:
 
-The identifier could include the type of observation made by the human. 
+_**urn:ioos:survey:wind_speed_indicator:estimated_in_knots**_ ,
 
-For example, in the Handbook, Chapter 2, page 2-7 says "iw" is the “wind speed indicator” and that it has values 0,1,3,4 depending on how the wind speed was estimated or measured, with "3" being “wind speed estimated in knots.” We could, for example, use 
+Similarly, from p.2-76, sea surface temperature measurement can be identified as  
 
-_**<urn:ioos:observer:iw:3>**_
+_**urn:ioos:survey:ss:1**_, 
 
-as the “sensor” ID for such an observation.  Or, we could be less cryptic (since we are not so bandwidth-constrained these days) and expand that out: 
+or
+ 
+_**urn:ioos:survey:sst_indicator:negative_intake_measurement**_ 
 
-_**<urn:ioos:observer:wind_speed_indicator:estimated_in_knots>**_
-
-Similarly, from p.2-76, sea surface temperature measurement could use 
-
-_**<urn:ioos:observer:ss:1>**_
-_**<urn:ioos:observer:sst_indicator:negative_intake_measurement>**_
-
-Personally, I think the cryptic VOS codes could be recorded as-is in the DB because that is presumably what you’re getting on input, and then on output they could be converted to something more readable. 
-
-I don’t know whether (1) or (2) or neither is best. I’m assuming that some data users need to know information like iw=3 and ss=1.
-
-References
-==========
-
-[IETF RFC 2141](http://tools.ietf.org/html/rfc2141-http://tools.ietf.org/html/rfc2141)
-
-
- 
-
-<Category:Integrated_Ocean_Observing_System_(IOOS)>
-<Category:IOOS_Guidelines>
+<br>
+<br>
 
