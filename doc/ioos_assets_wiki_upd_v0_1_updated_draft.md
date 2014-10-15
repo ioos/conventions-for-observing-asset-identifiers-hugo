@@ -16,7 +16,7 @@ Many assets have numbers or labels assigned to them by an external authority. Fo
 |---------|-------------|----- |
 |0.0.1|First draft.|2010-12-22 |
 |0.1  |Updated draft|2013-12-06 |
-| 0.9 | Updated for Milestone 1.0 | 2014-08-31 |
+|0.2  | Updated for Milestone 1.0 | 2014-08-31 |
 
 <br>
 <br>
