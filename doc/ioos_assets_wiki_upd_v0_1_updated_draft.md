@@ -5,7 +5,7 @@ Contributors: Derrick Snowden, Carmel Ortiz, and Alex Birger, U.S. IOOS Office; 
 
 ## Introduction ##
 
-This document describes the conventions used by the Integrated Ocean Observing System (IOOS) program to assign an identifier to IOOS-related observing assets including measurement stations, platforms and sensors.  An identifier is used as the name by which further metadata about the asset may be requested from IOOS web services. An IOOS identifier is the name that IOOS web services uses for the asset, but each asset may also have other names assigned by other communities.
+This document describes the conventions used by the Integrated Ocean Observing System (IOOS) program to assign an identifier to IOOS-related observing assets including measurement sensors, stations, and networks of stations/sensors.  An identifier is used as the name by which further metadata about the asset may be requested from IOOS web services. An IOOS identifier is the name that IOOS web services uses for the asset, but each asset may also have other names assigned by other communities.
 
 Many assets have numbers or labels assigned to them by an external authority. For example, every weather buoy has a World Meteorological Organization (WMO) number. The IOOS identifiers allow for and make use of such identifiers. However, rather than merely using the number (e.g., 42001) which could refer to a buoy in the Gulf of Mexico or the postal code for Paducah, Kentucky or the section of the California Vehicle Code that describes fines imposed for moving violations, the IOOS identifiers add some semantics to indicate (a) the authority which assigned the number or name and (b) that the asset is somehow associated with IOOS. Being "associated with IOOS" in this context typically means that data from that asset could be discovered or accessed through the IOOS data management layer \[Needs reference\].
 
@@ -29,7 +29,7 @@ For the sake of illustration, we first provide examples of identifiers in use by
 
 | Asset      |  Identifier   |
 |--------    | ------------  |
-| WMO buoy 42001 | urn:ioos:station:wmo:42001 |
+|WMO buoy 42001 | urn:ioos:station:wmo:42001 |
 |Wave sensor on WMO buoy 42001|urn:ioos:station:wmo:42001:wpm1 |
 |CO-OPS station cb0102 |urn:ioos:station:NOAA.NOS.CO-OPS:cb0102 |
 |Active water level sensors within CO-OPS network of stations | urn:ioos:network:NOAA.NOS.CO-OPS:WaterLevelActive |
@@ -88,7 +88,7 @@ The _**asset_type**_ field indicates the type of asset to which this identifier 
 >A _**component**_ field may be added to the URN to identify a specific sensor located at the station. If _**component**_ field is omitted, the URN identifies station itself. 
 
 **network**
->A network of stations defined above. 
+>A network of stations defined above. Station pooling criteria may vary, i.e. network may include stations with certain sensors installed, controlled by some operator, located in a specific area, etc. 
 
 **sensor**
 >A device associated with the station that measures one or more observed quantities at or adjacent to the station location. Examples include: a water-level sensor; a temperature sensor; an anemometer; a current meter. A sensor identifier URN includes the _**authority**_ and _**label**_ fields of the station, and a _**component**_ field to distinguish it from other sensors at the same station. Note that _**label**_ for sensor is different from _**label**_ for station.
@@ -146,8 +146,8 @@ The _**component**_ field is used to distinguish between different assets associ
 
 ## Station Identifiers
 
-The pattern for IOOS platform identifiers is _**urn:ioos:station:authority:label\[:version\]**_
-Platform identifiers do not include a _**component**_ field.
+The pattern for IOOS station identifiers is _**urn:ioos:station:authority:label\[:version\]**_
+Station identifiers do not include a _**component**_ field.
 <br>
 
 ## Sensor Identifiers ##
