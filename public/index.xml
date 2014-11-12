@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Recent Content on IOOS DMAC </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://abirger.github.io/conventions-for-observing-asset-identifiers/index.xml/</link>
+    <language>en-us</language>
+    
+    
+    <updated>Mon, 04 Aug 2014 08:10:23 UTC</updated>
+    
+    <item>
+      <title>IOOS Asset ID Convention</title>
+      <link>http://abirger.github.io/conventions-for-observing-asset-identifiers/ioos_assets_wiki_init_v0_1/</link>
+      <pubDate>Mon, 04 Aug 2014 08:10:23 UTC</pubDate>
+      
+      <guid>http://abirger.github.io/conventions-for-observing-asset-identifiers/ioos_assets_wiki_init_v0_1/</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;This document describes the conventions used by the Integrated Ocean Observing System (IOOS) program to assign an identifier to IOOS-related observing assets including measurement stations, platforms and sensors.  An identifier is used as the name by which further metadata about the asset may be requested from IOOS web services. An IOOS identifier is the name that IOOS web services uses for the asset, but each asset may also have other names assigned by other communities.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;Many assets have numbers or labels assigned to them by an external authority. For example, every weather buoy has a World Meteorological Organization (WMO) number. The IOOS identifiers allow for and make use of such identifiers. However, rather than merely using the number (e.g., 42001) which could refer to a buoy in the Gulf of Mexico or the postal code for Paducah, Kentucky or the section of the California Vehicle Code that describes fines imposed for moving violations, the IOOS identifiers add some semantics to indicate (a) the authority which assigned the number or name and (b) that the asset is somehow associated with IOOS. Being &amp;ldquo;associated with IOOS&amp;rdquo; in this context typically means that data from that asset could be discovered or accessed through the IOOS data management layer [Needs reference].&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_1&#34;&gt;Revision History&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Version&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;th&gt;Date&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0.0.1&lt;/td&gt;
+&lt;td&gt;First draft.&lt;/td&gt;
+&lt;td&gt;2010-12-22&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;0.1  &lt;/td&gt;
+&lt;td&gt;Updated draft&lt;/td&gt;
+&lt;td&gt;2013-12-06&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;  &lt;/td&gt;
+&lt;td&gt;  &lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;pre style=&#34;color:red&#34;&gt; This is a bit &#34;combed&#34; DRAFT version of the document; needs further edition and format&lt;/pre&gt;
+
+&lt;p&gt;Authors: Jeff de La Beaujardière, NOAA/NESDIS/Technology Planning and Integration Office&lt;br&gt;
+Contributors: Derrick Snowden, Carmel Ortiz, and Alex Birger, U.S. IOOS Office; Anna Milan, Metadata Specialist at NOAA National Geophysical Data Center (NGDC).
+&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_2&#34;&gt;Informative Examples&lt;/h2&gt;
+
+&lt;p&gt;For the sake of illustration, we first provide examples of identifiers in use by IOOS. Later sections of this document constitute the actual specification of those identifiers.  In the case of conflict or ambiguity, the specification sections take precedence over these examples.
+&lt;br&gt;&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Asset&lt;/th&gt;
+&lt;th&gt;Identifier&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;WMO buoy 42001&lt;/td&gt;
+&lt;td&gt;urn:ioos:station:wmo:42001&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Wave sensor on WMO buoy 42001&lt;/td&gt;
+&lt;td&gt;urn:ioos:station:wmo:42001:wpm1&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;CO-OPS station cb0102&lt;/td&gt;
+&lt;td&gt;urn:ioos:station:NOAA.NOS.CO-OPS:cb0102&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Active water level sensors within CO-OPS network of stations&lt;/td&gt;
+&lt;td&gt;urn:ioos:network:NOAA.NOS.CO-OPS:WaterLevelActive&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Water level sensor at CO-OPS station 8454000&lt;/td&gt;
+&lt;td&gt;urn:ioos:sensor:NOAA.NOS.CO-OPS:8454000:D1&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Nortek Acoustic Doppler Profiler sensor that is measuring water currents and/or waves and is mounted on the CO-OPS cb0201 station&lt;/td&gt;
+&lt;td&gt;style=white-space:nowrap&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;toc_3&#34;&gt;General Identifier Conventions&lt;/h1&gt;
+
+&lt;h2 id=&#34;toc_4&#34;&gt;Use of Uniform Resource Names&lt;/h2&gt;
+
+&lt;p&gt;An IOOS identifier is a Uniform Resource Name (URN). URNs are commonly used as identifiers in the Internet\’s information architecture. An introductory description of URNs may be found on &lt;a href=&#34;http://en.wikipedia.org/wiki/Uniform_Resource_Name&#34;&gt;Wikipedia&lt;/a&gt;. Some of the material in this section is based on definitions and restrictions established by Internet &lt;a href=&#34;http://tools.ietf.org/html/rfc2141&#34;&gt;Engineering Task Force (IETF) Request for Comments (RFC) 2141&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;All URNs assigned by IOOS begin with the string &lt;em&gt;&lt;strong&gt;urn:ioos:&lt;/strong&gt;&lt;/em&gt;, followed by one or more fields also separated by colons (&lt;em&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/em&gt;). The initial &lt;em&gt;&lt;strong&gt;urn:&lt;/strong&gt;&lt;/em&gt; indicates that the identifier is a URN. The following &lt;em&gt;&lt;strong&gt;ioos:&lt;/strong&gt;&lt;/em&gt; indicates that the URN is in the IOOS namespace.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: IOOS intended to formally register the &lt;strong&gt;ioos&lt;/strong&gt; namespace with IANA, but has not done it yet (2010-12-22) has not.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The additional fields may only include letters and numbers (&lt;em&gt;&lt;strong&gt;A-Z&lt;/strong&gt;&lt;/em&gt;, &lt;em&gt;&lt;strong&gt;a-z&lt;/strong&gt;&lt;/em&gt;, &lt;em&gt;&lt;strong&gt;0-9&lt;/strong&gt;&lt;/em&gt;) and the following characters: &lt;em&gt;&lt;strong&gt;( ) + , - . = @ ; $ _ ! &lt;/strong&gt;*&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Special characters not in the foregoing list must be represented using hexadecimal encoding as &lt;em&gt;&lt;strong&gt;%xx&lt;/strong&gt;&lt;/em&gt;, where &lt;strong&gt;xx&lt;/strong&gt; represents a two-digit hex value. The use of such characters in IOOS URNs is not recommended.
+&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_5&#34;&gt;Case-insensitivity&lt;/h2&gt;
+
+&lt;p&gt;IOOS URNs are considered to be case-insensitive. Example: &lt;em&gt;&lt;strong&gt;urn:ioos:ABC&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;urn:ioos:abc&lt;/strong&gt;&lt;/em&gt; refer to the same thing. This is more restrictive than, but permitted by, IETF RFC 2141.  The fields in IOOS URNs are customarily lower-case but may appear in uppercase or mixed-case.
+&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_6&#34;&gt;Identifier Pattern&lt;/h2&gt;
+
+&lt;p&gt;The general pattern for IOOS asset identifiers is&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;urn:ioos:asset_type:authority:label[:component]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;which consists of the following fields delimited by &amp;ldquo;&lt;em&gt;&lt;strong&gt;:&lt;/strong&gt;&lt;/em&gt;&amp;ldquo;:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;urn:ioos&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;a fixed string indicating this is an IOOS URN;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;asset_type&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;a variable indicating the type of asset being identified;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;authority&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;an abbreviation or name for the organization that assigned the label;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;label&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;the number or label that was assigned by the authority to the asset;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;component&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;an optional field naming a specific component.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The following sections explain in details the use of all variable fields.  Ideally these fields will be populated with values from community governed controlled vocabularies.  While this is not mandated by this specification, some candidate vocabularies are suggested in the following sections.
+&lt;br&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_7&#34;&gt;Asset Type&lt;/h3&gt;
+
+&lt;p&gt;The &lt;em&gt;&lt;strong&gt;asset_type&lt;/strong&gt;&lt;/em&gt; field indicates the type of asset to which this identifier applies. The following values for &lt;em&gt;&lt;strong&gt;asset_type&lt;/strong&gt;&lt;/em&gt; are recognized by IOOS:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;station&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A fixed installation or nominally-constant position where measurements are performed.  Examples include: a water-level gauge mounted on a pier; a moored buoy that moves within a known watch radius of the nominal mooring location; an OceanSITES deep-water monitoring location; a site at which water quality samples are taken.&lt;/p&gt;
+
+&lt;p&gt;A &lt;em&gt;&lt;strong&gt;component&lt;/strong&gt;&lt;/em&gt; field may be added to the URN to identify a specific sensor located at the station. If &lt;em&gt;&lt;strong&gt;component&lt;/strong&gt;&lt;/em&gt; field is omitted, the URN identifies station itself.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;network&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A network of stations defined above.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;sensor&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A device associated with the station that measures one or more observed quantities at or adjacent to the station location. Examples include: a water-level sensor; a temperature sensor; an anemometer; a current meter. A sensor identifier URN includes the &lt;em&gt;&lt;strong&gt;authority&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;label&lt;/strong&gt;&lt;/em&gt; fields of the station, and a &lt;em&gt;&lt;strong&gt;component&lt;/strong&gt;&lt;/em&gt; field to distinguish it from other sensors at the same station. Note that &lt;em&gt;&lt;strong&gt;label&lt;/strong&gt;&lt;/em&gt; for sensor is different from &lt;em&gt;&lt;strong&gt;label&lt;/strong&gt;&lt;/em&gt; for station.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;survey&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;A visual observation, measurement or collecting samples by a human observer performed at a station or from a ship for a follow-up analyzes in the laboratory.
+Example: a quarterly visit to a known location to collect water for chemical analysis; an assessment by a diver of the species present in a particular location, etc.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Additional &lt;em&gt;&lt;strong&gt;asset_type&lt;/strong&gt;&lt;/em&gt; values may be added by IOOS as needed.  Candidate controlled vocabularies that may be adopted as the valid values in the &lt;em&gt;&lt;strong&gt;asset_type&lt;/strong&gt;&lt;/em&gt; field are:
+* &lt;a href=&#34;http://mmisw.org/orr/#http://mmisw.org/ont/mmi/device&#34;&gt;Marine Metadata Initiative Device Ontology&lt;/a&gt;
+* &lt;a href=&#34;http://mmisw.org/orr/#http://vocab.ndg.nerc.ac.uk/list/L221/current&#34;&gt;BODC Instruments List&lt;/a&gt;
+* &lt;a href=&#34;http://gcmdservices.gsfc.nasa.gov/static/kms/instruments/instruments.csv&#34;&gt;GCMD Instrument types&lt;/a&gt;
+&lt;br&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_8&#34;&gt;Authority&lt;/h3&gt;
+
+&lt;p&gt;The &lt;em&gt;&lt;strong&gt;authority&lt;/strong&gt;&lt;/em&gt; field indicates the organization that assigned the label for this asset. There is no fixed set of values, because additional authorities may become relevant as new observing systems are connected to IOOS. However, the same abbreviation or name should be used for all instances of a particular authority. These abbreviations are case insensitive.  The following values for &lt;em&gt;&lt;strong&gt;authority&lt;/strong&gt;&lt;/em&gt; are currently used in IOOS:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;wmo&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;World Meteorological Association.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;noaa.nos.co-ops&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Center for Operational Oceanographic Products and Services (COOPS) in the National Ocean Service (NOS) of the U.S. National Oceanic and Atmospheric Administration (NOAA).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;usace&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;U.S. Army Corps of Engineers.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;fiu&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Florida International University.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;test&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Temporary service instance using for test.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Candidate controlled vocabularies that may be adopted as valid values for the &lt;em&gt;&lt;strong&gt;authority&lt;/strong&gt;&lt;/em&gt; field include:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;GCMD Keywords
+
+&lt;ul&gt;
+&lt;li&gt;Data Centers: &lt;a href=&#34;http://gcmdservices.gsfc.nasa.gov/static/kms/providers/providers.csv&#34;&gt;http://gcmdservices.gsfc.nasa.gov/static/kms/providers/providers.csv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Projects: &lt;a href=&#34;http://gcmdservices.gsfc.nasa.gov/static/kms/projects/projects.csv&#34;&gt;http://gcmdservices.gsfc.nasa.gov/static/kms/projects/projects.csv&lt;/a&gt;
+&lt;br&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;toc_9&#34;&gt;Label&lt;/h3&gt;
+
+&lt;p&gt;The &lt;em&gt;&lt;strong&gt;label&lt;/strong&gt;&lt;/em&gt; is a number or string assigned by the Authority to the asset. Allowed values are defined by the particular authority. The only restrictions are that (a) the characters used must not conflict with the URN specification (see section 2.1) and (b) labels in the scope of a given authority must be unique.
+The &lt;em&gt;&lt;strong&gt;label&lt;/strong&gt;&lt;/em&gt; value varies between station and sensor URNs.
+&lt;br&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_10&#34;&gt;Component&lt;/h3&gt;
+
+&lt;p&gt;The &lt;em&gt;&lt;strong&gt;component&lt;/strong&gt;&lt;/em&gt; field is used to distinguish between different assets associated with the same parent asset. For example, a buoy may have multiple sensors attached to it, and each sensor will have an identifier that includes the label for the buoy and the label for the sensor.  The component label must be unique for each &lt;em&gt;&lt;strong&gt;asset_type&lt;/strong&gt;&lt;/em&gt;:&lt;em&gt;&lt;strong&gt;authority&lt;/strong&gt;&lt;/em&gt;:&lt;em&gt;&lt;strong&gt;label&lt;/strong&gt;&lt;/em&gt;.
+&lt;br&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;toc_11&#34;&gt;Conventions for Specific Asset Types&lt;/h1&gt;
+
+&lt;h2 id=&#34;toc_12&#34;&gt;Station Identifiers&lt;/h2&gt;
+
+&lt;p&gt;The pattern for IOOS platform identifiers is &lt;em&gt;&lt;strong&gt;urn:ioos:station:authority:label[:version]&lt;/strong&gt;&lt;/em&gt;
+Platform identifiers do not include a &lt;em&gt;&lt;strong&gt;component&lt;/strong&gt;&lt;/em&gt; field.
+&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_13&#34;&gt;Sensor Identifiers&lt;/h2&gt;
+
+&lt;p&gt;The pattern for IOOS sensor identifiers may be either&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;urn:ioos:sensor:authority:label_sensor[:version]&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;urn:ioos:station:authority:label_station:component[:version]&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Depending on the option, sensor is identified either by its &lt;em&gt;&lt;strong&gt;label_sensor&lt;/strong&gt;&lt;/em&gt;, or by a station &lt;em&gt;&lt;strong&gt;component&lt;/strong&gt;&lt;/em&gt; field, which provides a name for the sensor.  The specific names are at the discretion of the organization operating the sensor or the service to access data from the sensor. The &lt;em&gt;&lt;strong&gt;component&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;label_sensor&lt;/strong&gt;&lt;/em&gt; values may vary for the same sensor, and may reflect the make and model of the sensor (e.g., &amp;ldquo;SONTEK-ADP-419&amp;rdquo;), the phenomenon observed by that sensor (e.g., &amp;ldquo;salinity&amp;rdquo;), or an arbitrary label used by the organization (e.g., &amp;ldquo;A1&amp;rdquo;). The name may not include characters not allowed in Section 3.1.
+&lt;br&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_14&#34;&gt;Version&lt;/h3&gt;
+
+&lt;p&gt;Currently, IOOS Conventions do not regulate asset versioning; therefore, no requirements have been established for the version number report. It is strongly recommended to avoid referring to any version number at all in asset&amp;rsquo;s URN.
+&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_15&#34;&gt;Survey Identifiers&lt;/h2&gt;
+
+&lt;p&gt;(To be discussed)&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_16&#34;&gt;Visual Observations from Ships&lt;/h2&gt;
+
+&lt;p&gt;(this is probably the same as survey identifiers)&lt;/p&gt;
+
+&lt;p&gt;Observer (i.e. &lt;em&gt;&lt;strong&gt;urn:ioos:observer:&amp;hellip;&lt;/strong&gt;&lt;/em&gt;) seems just as good as other choices. &lt;/p&gt;
+
+&lt;p&gt;I think it would be good to also indicate either (1) the general observing protocol or (2) the specific type of observation, as follows: &lt;/p&gt;
+
+&lt;h4 id=&#34;toc_17&#34;&gt;&lt;em&gt;(1) General observing protocol&lt;/em&gt;&lt;/h4&gt;
+
+&lt;p&gt;If visual estimates are made according to, for example, the &lt;a href=&#34;http://www.vos.noaa.gov/ObsHB-508/ObservingHandbook1_2004_508_compliant.pdf&#34;&gt;NWS Observing Handbook No. 1 (2004)&lt;/a&gt;, then perhaps the so-called “sensor” ID could be something like &lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;a href=&#34;urn:ioos:observer:nws_observing_handbook:2004&#34;&gt;urn:ioos:observer:nws_observing_handbook:2004&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Indeed, instead of inventing our own URI for this case perhaps we should just insert the URL of the observing protocol: &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.vos.noaa.gov/ObsHB-508/ObservingHandbook1_2004_508_compliant.pdf&#34;&gt;http://www.vos.noaa.gov/ObsHB-508/ObservingHandbook1_2004_508_compliant.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This avoids any need for additional interpretation. In the IOOS water quality project we have seen another case where the “metadata” about the measurement procedure is a PDF file containing descriptions of laboratory procedures. &lt;/p&gt;
+
+&lt;h4 id=&#34;toc_18&#34;&gt;&lt;em&gt;(2) Specific type of observation&lt;/em&gt;&lt;/h4&gt;
+
+&lt;p&gt;The identifier could include the type of observation made by the human. &lt;/p&gt;
+
+&lt;p&gt;For example, in the Handbook, Chapter 2, page 2-7 says &amp;ldquo;iw&amp;rdquo; is the “wind speed indicator” and that it has values 0,1,3,4 depending on how the wind speed was estimated or measured, with &amp;ldquo;3&amp;rdquo; being “wind speed estimated in knots.” We could, for example, use &lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;a href=&#34;urn:ioos:observer:iw:3&#34;&gt;urn:ioos:observer:iw:3&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;as the “sensor” ID for such an observation.  Or, we could be less cryptic (since we are not so bandwidth-constrained these days) and expand that out: &lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;a href=&#34;urn:ioos:observer:wind_speed_indicator:estimated_in_knots&#34;&gt;urn:ioos:observer:wind_speed_indicator:estimated_in_knots&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Similarly, from p.2-76, sea surface temperature measurement could use &lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;&lt;a href=&#34;urn:ioos:observer:ss:1&#34;&gt;urn:ioos:observer:ss:1&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;
+&lt;em&gt;&lt;strong&gt;&lt;a href=&#34;urn:ioos:observer:sst_indicator:negative_intake_measurement&#34;&gt;urn:ioos:observer:sst_indicator:negative_intake_measurement&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Personally, I think the cryptic VOS codes could be recorded as-is in the DB because that is presumably what you’re getting on input, and then on output they could be converted to something more readable. &lt;/p&gt;
+
+&lt;p&gt;I don’t know whether (1) or (2) or neither is best. I’m assuming that some data users need to know information like iw=3 and ss=1.&lt;/p&gt;
+
+&lt;h1 id=&#34;toc_19&#34;&gt;References&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://tools.ietf.org/html/rfc2141-http://tools.ietf.org/html/rfc2141&#34;&gt;IETF RFC 2141&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;Category:Integrated_Ocean_Observing_System_(IOOS)&#34;&gt;Category:Integrated_Ocean_Observing_System_(IOOS)&lt;/a&gt;
+&lt;a href=&#34;Category:IOOS_Guidelines&#34;&gt;Category:IOOS_Guidelines&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

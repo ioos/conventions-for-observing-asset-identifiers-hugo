@@ -1,0 +1,14 @@
+baseurl = "http://abirger.github.io/conventions-for-observing-asset-identifiers"
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+languageCode = "en-us"
+Title = "IOOS DMAC"
+[params]
+ Description = "Asset Identification Convention"
+ Copyright = "(C) 2014 U.S. IOOS. Some rights reserved"
+
+
+	
+	
+ 
