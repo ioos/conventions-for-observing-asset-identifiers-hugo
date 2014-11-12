@@ -11,12 +11,12 @@ weight = "1"
 _This document describes the conventions used by the Integrated Ocean Observing System (IOOS) program to assign an identifier to IOOS-related observing assets including measurement stations, platforms and sensors.  An identifier is used as the name by which further metadata about the asset may be requested from IOOS web services. An IOOS identifier is the name that IOOS web services uses for the asset, but each asset may also have other names assigned by other communities._
 <!--more-->
 
-## Introduction ##
+# Introduction #
 
 Many assets have numbers or labels assigned to them by an external authority. For example, every weather buoy has a World Meteorological Organization (WMO) number. The IOOS identifiers allow for and make use of such identifiers. However, rather than merely using the number (e.g., 42001) which could refer to a buoy in the Gulf of Mexico or the postal code for Paducah, Kentucky or the section of the California Vehicle Code that describes fines imposed for moving violations, the IOOS identifiers add some semantics to indicate (a) the authority which assigned the number or name and (b) that the asset is somehow associated with IOOS. Being "associated with IOOS" in this context typically means that data from that asset could be discovered or accessed through the IOOS data management layer \[Needs reference\].
 
 
-## Revision History ##
+# Revision History #
 
 | Version | Description | Date |
 |---------|-------------|----- |
@@ -31,7 +31,7 @@ Contributors: Derrick Snowden, Carmel Ortiz, and Alex Birger, U.S. IOOS Office; 
 <br>
 <br>
 
-## Informative Examples ##
+# Informative Examples #
 
 For the sake of illustration, we first provide examples of identifiers in use by IOOS. Later sections of this document constitute the actual specification of those identifiers.  In the case of conflict or ambiguity, the specification sections take precedence over these examples. 
 <br>
