@@ -1,12 +1,16 @@
 baseurl = "http://abirger.github.io/conventions-for-observing-asset-identifiers"
+CanonifyUrls = true
 contentdir = "content"
 layoutdir = "layouts"
 publishdir = "public"
 languageCode = "en-us"
-Title = "IOOS DMAC"
 [params]
- Description = "Asset Identification Convention"
- Copyright = "(C) 2014 U.S. IOOS. Some rights reserved"
+  Title = "IOOS Observing Asset Identifiers"
+  Tagline = "Conventions for Asset Identification"
+[params.Github]
+  Head = "master"
+  Url = "https://github.com/ioos/conventions-for-observing-asset-identifiers"
+
 
 
 	

@@ -1,104 +1,137 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-<head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile"> 
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-  <title> IOOS Asset ID Convention &middot; IOOS DMAC </title>
+  <title>
+    
+      IOOS Convention for Asset Identification &middot; IOOS Observing Asset Identifiers
+    
+  </title>
 
   
   <link rel="stylesheet" href="http://abirger.github.io/conventions-for-observing-asset-identifiers/css/poole.css">
   <link rel="stylesheet" href="http://abirger.github.io/conventions-for-observing-asset-identifiers/css/syntax.css">
-  <link rel="stylesheet" href="http://abirger.github.io/conventions-for-observing-asset-identifiers/css/hyde.css">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="http://abirger.github.io/conventions-for-observing-asset-identifiers/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
 
   
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://abirger.github.io/conventions-for-observing-asset-identifiers/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="http://abirger.github.io/conventions-for-observing-asset-identifiers/assets/favicon.ico">
 
   
-  <link href="" rel="alternate" type="application/rss+xml" title="IOOS DMAC" />
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://abirger.github.io/conventions-for-observing-asset-identifiers/atom.xml">
 </head>
 
-<body>
 
-<div class="sidebar">
-   	<p>  <img src="/conventions-for-observing-asset-identifiers/images/ioos_blue2.png" alt="ho-ho-ho"> </p> 
+  <body>
 
-	<div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <h1>IOOS DMAC</h1>
-      <p class="lead">
-       Asset Identification Convention 
-      </p>
-    </div>
+    
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
 
-    <ul class="sidebar-nav">
-      <li><a href="http://ioos.github.io">IOOS Home</a> </li>
-	  <li><a href="/conventions-for-observing-asset-identifiers/">AssetID Convention Home</a> </li>
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p align="center">&middot; <a href="http://ioos.github.io/" target="_blank">IOOS GitHub Pages</a> &middot; <br>
+	a collection of IOOS documentation and software</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="http://abirger.github.io/conventions-for-observing-asset-identifiers/">Home</a>
+
+
+  <div class="sidebar-item">
+    <p>Documents</p>
+  </div>
+
+<p style="text-align:right"> 
+    
+    
       
-    </ul>
+        <a class="sidebar-nav-item-list " href="http://abirger.github.io/conventions-for-observing-asset-identifiers/index.html">ABOUT: IOOS Convention for Asset Identification</a>
+      
+    
+      
+        <a class="sidebar-nav-item-list  active " href="http://abirger.github.io/conventions-for-observing-asset-identifiers/ioos_assets_wiki_init_v0_1/">IOOS Convention for Asset Identification</a>
+      
+    
+</p>
 
-	
+    <a class="sidebar-nav-item" href="https://github.com/ioos/conventions-for-observing-asset-identifiers/archive/master.zip">Download</a>
+    <a class="sidebar-nav-item" href="https://github.com/ioos/conventions-for-observing-asset-identifiers">GitHub repository</a>
+    <span class="sidebar-nav-item">Currently on master</span>
+  </nav>
 
-	
-  
+  <div class="sidebar-item">
+    <p>&copy; 2014 U.S. IOOS. Some rights reserved</p>
   </div>
 </div>
 
 
-    <div class="content container">
+    
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h2 class="masthead-title">
+		  <a href="http://abirger.github.io/conventions-for-observing-asset-identifiers/" title="Home"> IOOS Observing Asset Identifiers &middot; 
+		  <small>Conventions for Asset Identification</small>
+		  <img src="http://abirger.github.io/conventions-for-observing-asset-identifiers/images/ioos_blue2.png" alt="Smiley face" align="right" /></a>
+		  </h2>
+        </div>
+      </div>
+
+      <div class="container content">
+
+
 <div class="post">
-
-  <h1>IOOS Asset ID Convention</h1>
-
+  <h1 class="post-title">IOOS Convention for Asset Identification</h1>
     <div id="toc" class="well col-md-4 col-sm-6">
     <nav id="TableOfContents">
 <ul>
 <li><a href="#toc_0">Introduction</a></li>
 <li><a href="#toc_1">Revision History</a></li>
-<li><a href="#toc_2">Informative Examples</a></li>
-<li><a href="#toc_3">General Identifier Conventions</a>
+<li><a href="#toc_2">Contributors</a></li>
+<li><a href="#toc_3">Informative Examples</a></li>
+<li><a href="#toc_4">General Identifier Conventions</a>
 <ul>
-<li><a href="#toc_4">Use of Uniform Resource Names</a></li>
-<li><a href="#toc_5">Case-insensitivity</a></li>
-<li><a href="#toc_6">Identifier Pattern</a>
+<li><a href="#toc_5">Use of Uniform Resource Names</a></li>
+<li><a href="#toc_6">Case-insensitivity</a></li>
+<li><a href="#toc_7">Identifier Pattern</a>
 <ul>
-<li><a href="#toc_7">Asset Type</a></li>
-<li><a href="#toc_8">Authority</a></li>
-<li><a href="#toc_9">Label</a></li>
-<li><a href="#toc_10">Component</a></li>
+<li><a href="#toc_8">Asset Type</a></li>
+<li><a href="#toc_9">Authority</a></li>
+<li><a href="#toc_10">Label</a></li>
+<li><a href="#toc_11">Component</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#toc_11">Conventions for Specific Asset Types</a>
+<li><a href="#toc_12">Conventions for Specific Asset Types</a>
 <ul>
-<li><a href="#toc_12">Station Identifiers</a></li>
-<li><a href="#toc_13">Sensor Identifiers</a>
+<li><a href="#toc_13">Station Identifiers</a></li>
+<li><a href="#toc_14">Sensor Identifiers</a>
 <ul>
-<li><a href="#toc_14">Version</a></li>
+<li><a href="#toc_15">Version</a></li>
 </ul></li>
-<li><a href="#toc_15">Survey Identifiers</a></li>
-<li><a href="#toc_16">Visual Observations from Ships</a>
+<li><a href="#toc_16">Survey Identifiers</a></li>
+<li><a href="#toc_17">Visual Observations from Ships</a>
 <ul>
 <li>
 <ul>
-<li><a href="#toc_17"><em>(1) General observing protocol</em></a></li>
-<li><a href="#toc_18"><em>(2) Specific type of observation</em></a></li>
+<li><a href="#toc_18"><em>(1) General observing protocol</em></a></li>
+<li><a href="#toc_19"><em>(2) Specific type of observation</em></a></li>
 </ul></li>
 </ul></li>
 </ul></li>
-<li><a href="#toc_19">References</a></li>
+<li><a href="#toc_20">References</a></li>
 </ul>
 </nav>
     </div>
+  
 
-      
-
-<p><em>This document describes the conventions used by the Integrated Ocean Observing System (IOOS) program to assign an identifier to IOOS-related observing assets including measurement stations, platforms and sensors.  An identifier is used as the name by which further metadata about the asset may be requested from IOOS web services. An IOOS identifier is the name that IOOS web services uses for the asset, but each asset may also have other names assigned by other communities.</em></p>
+<p><br><br></p>
 
 <h1 id="toc_0">Introduction</h1>
 
@@ -136,14 +169,56 @@
 </tbody>
 </table>
 
-<pre style="color:red"> This is a bit "combed" DRAFT version of the document; needs further edition and format</pre>
+<p><br></p>
 
-<p>Authors: Jeff de La Beaujardière, NOAA/NESDIS/Technology Planning and Integration Office<br>
-Contributors: Derrick Snowden, Carmel Ortiz, and Alex Birger, U.S. IOOS Office; Anna Milan, Metadata Specialist at NOAA National Geophysical Data Center (NGDC).
-<br>
+<h1 id="toc_2">Contributors</h1>
+
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Role</th>
+<th align="left">Association</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">Jeff de La Beaujardière</td>
+<td align="left">Author</td>
+<td align="left">NOAA/NESDIS/Technology Planning and Integration Office</td>
+</tr>
+
+<tr>
+<td align="left">Derrick Snowden</td>
+<td align="left">Contributor</td>
+<td align="left">U.S. IOOS Office</td>
+</tr>
+
+<tr>
+<td align="left">Carmel Ortiz</td>
+<td align="left">Contributor</td>
+<td align="left">U.S. IOOS Office</td>
+</tr>
+
+<tr>
+<td align="left">Alex Birger</td>
+<td align="left">Contributor</td>
+<td align="left">U.S. IOOS Office</td>
+</tr>
+
+<tr>
+<td align="left">Anna Milan</td>
+<td align="left">Contributor</td>
+<td align="left">NOAA National Geophysical Data Center (NGDC)</td>
+</tr>
+</tbody>
+</table>
+
+<p><br>
 <br></p>
 
-<h1 id="toc_2">Informative Examples</h1>
+<h1 id="toc_3">Informative Examples</h1>
 
 <p>For the sake of illustration, we first provide examples of identifiers in use by IOOS. Later sections of this document constitute the actual specification of those identifiers.  In the case of conflict or ambiguity, the specification sections take precedence over these examples.
 <br></p>
@@ -191,9 +266,9 @@ Contributors: Derrick Snowden, Carmel Ortiz, and Alex Birger, U.S. IOOS Office; 
 
 <p><br></p>
 
-<h1 id="toc_3">General Identifier Conventions</h1>
+<h1 id="toc_4">General Identifier Conventions</h1>
 
-<h2 id="toc_4">Use of Uniform Resource Names</h2>
+<h2 id="toc_5">Use of Uniform Resource Names</h2>
 
 <p>An IOOS identifier is a Uniform Resource Name (URN). URNs are commonly used as identifiers in the Internet\’s information architecture. An introductory description of URNs may be found on <a href="http://en.wikipedia.org/wiki/Uniform_Resource_Name">Wikipedia</a>. Some of the material in this section is based on definitions and restrictions established by Internet <a href="http://tools.ietf.org/html/rfc2141">Engineering Task Force (IETF) Request for Comments (RFC) 2141</a>.</p>
 
@@ -206,12 +281,12 @@ Contributors: Derrick Snowden, Carmel Ortiz, and Alex Birger, U.S. IOOS Office; 
 <p>Special characters not in the foregoing list must be represented using hexadecimal encoding as <em><strong>%xx</strong></em>, where <strong>xx</strong> represents a two-digit hex value. The use of such characters in IOOS URNs is not recommended.
 <br></p>
 
-<h2 id="toc_5">Case-insensitivity</h2>
+<h2 id="toc_6">Case-insensitivity</h2>
 
 <p>IOOS URNs are considered to be case-insensitive. Example: <em><strong>urn:ioos:ABC</strong></em> and <em><strong>urn:ioos:abc</strong></em> refer to the same thing. This is more restrictive than, but permitted by, IETF RFC 2141.  The fields in IOOS URNs are customarily lower-case but may appear in uppercase or mixed-case.
 <br></p>
 
-<h2 id="toc_6">Identifier Pattern</h2>
+<h2 id="toc_7">Identifier Pattern</h2>
 
 <p>The general pattern for IOOS asset identifiers is</p>
 
@@ -252,7 +327,7 @@ Contributors: Derrick Snowden, Carmel Ortiz, and Alex Birger, U.S. IOOS Office; 
 <p>The following sections explain in details the use of all variable fields.  Ideally these fields will be populated with values from community governed controlled vocabularies.  While this is not mandated by this specification, some candidate vocabularies are suggested in the following sections.
 <br></p>
 
-<h3 id="toc_7">Asset Type</h3>
+<h3 id="toc_8">Asset Type</h3>
 
 <p>The <em><strong>asset_type</strong></em> field indicates the type of asset to which this identifier applies. The following values for <em><strong>asset_type</strong></em> are recognized by IOOS:</p>
 
@@ -289,7 +364,7 @@ Example: a quarterly visit to a known location to collect water for chemical ana
 * <a href="http://gcmdservices.gsfc.nasa.gov/static/kms/instruments/instruments.csv">GCMD Instrument types</a>
 <br></p>
 
-<h3 id="toc_8">Authority</h3>
+<h3 id="toc_9">Authority</h3>
 
 <p>The <em><strong>authority</strong></em> field indicates the organization that assigned the label for this asset. There is no fixed set of values, because additional authorities may become relevant as new observing systems are connected to IOOS. However, the same abbreviation or name should be used for all instances of a particular authority. These abbreviations are case insensitive.  The following values for <em><strong>authority</strong></em> are currently used in IOOS:</p>
 
@@ -335,26 +410,26 @@ Example: a quarterly visit to a known location to collect water for chemical ana
 </ul></li>
 </ul>
 
-<h3 id="toc_9">Label</h3>
+<h3 id="toc_10">Label</h3>
 
 <p>The <em><strong>label</strong></em> is a number or string assigned by the Authority to the asset. Allowed values are defined by the particular authority. The only restrictions are that (a) the characters used must not conflict with the URN specification (see section 2.1) and (b) labels in the scope of a given authority must be unique.
 The <em><strong>label</strong></em> value varies between station and sensor URNs.
 <br></p>
 
-<h3 id="toc_10">Component</h3>
+<h3 id="toc_11">Component</h3>
 
 <p>The <em><strong>component</strong></em> field is used to distinguish between different assets associated with the same parent asset. For example, a buoy may have multiple sensors attached to it, and each sensor will have an identifier that includes the label for the buoy and the label for the sensor.  The component label must be unique for each <em><strong>asset_type</strong></em>:<em><strong>authority</strong></em>:<em><strong>label</strong></em>.
 <br></p>
 
-<h1 id="toc_11">Conventions for Specific Asset Types</h1>
+<h1 id="toc_12">Conventions for Specific Asset Types</h1>
 
-<h2 id="toc_12">Station Identifiers</h2>
+<h2 id="toc_13">Station Identifiers</h2>
 
 <p>The pattern for IOOS platform identifiers is <em><strong>urn:ioos:station:authority:label[:version]</strong></em>
 Platform identifiers do not include a <em><strong>component</strong></em> field.
 <br></p>
 
-<h2 id="toc_13">Sensor Identifiers</h2>
+<h2 id="toc_14">Sensor Identifiers</h2>
 
 <p>The pattern for IOOS sensor identifiers may be either</p>
 
@@ -367,16 +442,16 @@ Platform identifiers do not include a <em><strong>component</strong></em> field.
 <p>Depending on the option, sensor is identified either by its <em><strong>label_sensor</strong></em>, or by a station <em><strong>component</strong></em> field, which provides a name for the sensor.  The specific names are at the discretion of the organization operating the sensor or the service to access data from the sensor. The <em><strong>component</strong></em> and <em><strong>label_sensor</strong></em> values may vary for the same sensor, and may reflect the make and model of the sensor (e.g., &ldquo;SONTEK-ADP-419&rdquo;), the phenomenon observed by that sensor (e.g., &ldquo;salinity&rdquo;), or an arbitrary label used by the organization (e.g., &ldquo;A1&rdquo;). The name may not include characters not allowed in Section 3.1.
 <br></p>
 
-<h3 id="toc_14">Version</h3>
+<h3 id="toc_15">Version</h3>
 
 <p>Currently, IOOS Conventions do not regulate asset versioning; therefore, no requirements have been established for the version number report. It is strongly recommended to avoid referring to any version number at all in asset&rsquo;s URN.
 <br></p>
 
-<h2 id="toc_15">Survey Identifiers</h2>
+<h2 id="toc_16">Survey Identifiers</h2>
 
 <p>(To be discussed)</p>
 
-<h2 id="toc_16">Visual Observations from Ships</h2>
+<h2 id="toc_17">Visual Observations from Ships</h2>
 
 <p>(this is probably the same as survey identifiers)</p>
 
@@ -384,7 +459,7 @@ Platform identifiers do not include a <em><strong>component</strong></em> field.
 
 <p>I think it would be good to also indicate either (1) the general observing protocol or (2) the specific type of observation, as follows: </p>
 
-<h4 id="toc_17"><em>(1) General observing protocol</em></h4>
+<h4 id="toc_18"><em>(1) General observing protocol</em></h4>
 
 <p>If visual estimates are made according to, for example, the <a href="http://www.vos.noaa.gov/ObsHB-508/ObservingHandbook1_2004_508_compliant.pdf">NWS Observing Handbook No. 1 (2004)</a>, then perhaps the so-called “sensor” ID could be something like </p>
 
@@ -396,7 +471,7 @@ Platform identifiers do not include a <em><strong>component</strong></em> field.
 
 <p>This avoids any need for additional interpretation. In the IOOS water quality project we have seen another case where the “metadata” about the measurement procedure is a PDF file containing descriptions of laboratory procedures. </p>
 
-<h4 id="toc_18"><em>(2) Specific type of observation</em></h4>
+<h4 id="toc_19"><em>(2) Specific type of observation</em></h4>
 
 <p>The identifier could include the type of observation made by the human. </p>
 
@@ -417,7 +492,7 @@ Platform identifiers do not include a <em><strong>component</strong></em> field.
 
 <p>I don’t know whether (1) or (2) or neither is best. I’m assuming that some data users need to know information like iw=3 and ss=1.</p>
 
-<h1 id="toc_19">References</h1>
+<h1 id="toc_20">References</h1>
 
 <p><a href="http://tools.ietf.org/html/rfc2141-http://tools.ietf.org/html/rfc2141">IETF RFC 2141</a></p>
 
@@ -427,7 +502,15 @@ Platform identifiers do not include a <em><strong>component</strong></em> field.
 <a href="Category:IOOS_Guidelines">Category:IOOS_Guidelines</a></p>
 
 </div>
-</div>
+
+
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
   </body>
 </html>
+
