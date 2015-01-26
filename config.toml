@@ -1,0 +1,18 @@
+baseurl = "http://ioos.github.io/conventions-for-observing-asset-identifiers"
+CanonifyUrls = true
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+languageCode = "en-us"
+[params]
+  Title = "IOOS Observing Asset Identifiers"
+  Tagline = "Conventions for Asset Identification"
+[params.Github]
+  Head = "master"
+  Url = "https://github.com/ioos/conventions-for-observing-asset-identifiers"
+
+
+
+	
+	
+ 
