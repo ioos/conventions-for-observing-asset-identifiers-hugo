@@ -20,7 +20,8 @@
 
 &lt;p&gt;&lt;em&gt;This document describes the conventions used by the Integrated Ocean Observing System (IOOS) program to assign an identifier to IOOS-related observing assets including measurement stations, platforms and sensors.  An identifier is used as the name by which further metadata about the asset may be requested from IOOS web services. An IOOS identifier is the name that IOOS web services uses for the asset, but each asset may also have other names assigned by other communities.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;p style=&#34;color:red; font-size:120%; border:3px solid red; padding:15px;&#34;&gt; This is a bit &amp;ldquo;combed&amp;rdquo; INITIAL DRAFT version of the document; needs further edition and format.&lt;br&gt;The &lt;a href=&#34;https://github.com/abirger/conventions-for-observing-asset-identifiers/blob/master/doc/ioos_assets_wiki_upd_v0_1_updated_draft.md&#34;&gt;UPDATED version of the Convention for the framework of IOOS SOS Milestone 1.0&lt;/a&gt; has been considered a DISCUSSION PAPER until approval. &lt;/p&gt;
+&lt;p&gt;&lt;p style=&#34;color:red; font-size:120%; border:3px solid red; padding:15px;&#34;&gt; This is a bit &amp;ldquo;combed&amp;rdquo; INITIAL DRAFT version of the document; needs further edition and format.&lt;br&gt;The &lt;a href=&#34;https://github.com/abirger/conventions-for-observing-asset-identifiers/blob/master/doc/ioos_assets_wiki_upd_v0_1_updated_draft.md&#34;&gt;UPDATED version of the Convention for the framework of IOOS SOS Milestone 1.0&lt;/a&gt; has been considered a
+DISCUSSION PAPER until approval. &lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;
 </description>
         </item>
