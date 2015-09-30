@@ -16,7 +16,7 @@
 			{{end}}
 		{{ end }}
 -->
- 	    {{ range first 1 .Data.Pages }}
+ 	    {{ range .Data.Pages }}
            <h2><a href='{{ .Permalink }}'>{{ .Title }}</a> </h2>
         	{{ if eq .RelPermalink "/conventions-for-observing-asset-identifiers/index.html" }} 
 				{{ .Content }}
