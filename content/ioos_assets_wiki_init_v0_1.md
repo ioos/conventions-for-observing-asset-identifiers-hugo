@@ -7,13 +7,11 @@ sidebar = true
 weight = "20"
 +++
 
+
+_Many assets have numbers or labels assigned to them by an external authority. For example, every weather buoy has a World Meteorological Organization (WMO) number. The IOOS identifiers allow for and make use of such identifiers. However, rather than merely using the number (e.g., 42001) which could refer to a buoy in the Gulf of Mexico or the postal code for Paducah, Kentucky or the section of the California Vehicle Code that describes fines imposed for moving violations, the IOOS identifiers add some semantics to indicate (a) the authority which assigned the number or name and (b) that the asset is somehow associated with IOOS. Being "associated with IOOS" in this context typically means that data from that asset could be discovered or accessed through the IOOS data management layer._
+<!--more-->
 <br><br>
 
-
-
-# Introduction 
-
-Many assets have numbers or labels assigned to them by an external authority. For example, every weather buoy has a World Meteorological Organization (WMO) number. The IOOS identifiers allow for and make use of such identifiers. However, rather than merely using the number (e.g., 42001) which could refer to a buoy in the Gulf of Mexico or the postal code for Paducah, Kentucky or the section of the California Vehicle Code that describes fines imposed for moving violations, the IOOS identifiers add some semantics to indicate (a) the authority which assigned the number or name and (b) that the asset is somehow associated with IOOS. Being "associated with IOOS" in this context typically means that data from that asset could be discovered or accessed through the IOOS data management layer.
 
 
 # Revision History 
@@ -21,7 +19,7 @@ Many assets have numbers or labels assigned to them by an external authority. Fo
 | Version | Description | Date |
 |---------|-------------|----- |
 |0.0.1|First draft.|2010-12-22 |
-|0.1  |Updated draft|2013-12-06 | |
+|0.1.0  |Updated draft|2013-12-06 | |
 
 
 <p style="color:red; font-size:120%; border:3px solid red; padding:15px;"> This is a bit "combed" INITIAL version of the document; needs further edition and format.<br>The [UPDATED version of the Convention for the framework of IOOS SOS Milestone 1.0](https://github.com/ioos/conventions-for-observing-asset-identifiers/blob/master/doc/ioos_assets_wiki_upd_v0_5_draft.md) has been considered a DISCUSSION PAPER until approval. </p>
