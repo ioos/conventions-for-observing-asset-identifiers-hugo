@@ -5,23 +5,20 @@
     <link>http://ioos.github.io/conventions-for-observing-asset-identifiers/</link>
     <language>en-us</language>
     <author></author>
-    <rights>(C) 2014</rights>
-    <updated>2014-08-04 07:56:39 &#43;0000 UTC</updated>
+    <rights>(C) 1</rights>
+    <updated>0001-01-01 00:00:00 &#43;0000 UTC</updated>
 
     
       
         <item>
           <title>ABOUT: IOOS Convention for Asset Identification</title>
-          <link>http://ioos.github.io/conventions-for-observing-asset-identifiers/index.html</link>
-          <pubDate>Mon, 04 Aug 2014 07:56:39 UTC</pubDate>
+          <link>http://ioos.github.io/conventions-for-observing-asset-identifiers/about/</link>
+          <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
           <author></author>
-          <guid>http://ioos.github.io/conventions-for-observing-asset-identifiers/index.html</guid>
+          <guid>http://ioos.github.io/conventions-for-observing-asset-identifiers/about/</guid>
           <description>&lt;!-- For a single homepage put in FrontMatter url = &#34;index.html&#34; --&gt;
 
 &lt;p&gt;&lt;em&gt;This document describes the conventions used by the Integrated Ocean Observing System (IOOS) program to assign an identifier to IOOS-related observing assets including measurement stations, platforms and sensors.  An identifier is used as the name by which further metadata about the asset may be requested from IOOS web services. An IOOS identifier is the name that IOOS web services uses for the asset, but each asset may also have other names assigned by other communities.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;p style=&#34;color:red; font-size:120%; border:3px solid red; padding:15px;&#34;&gt; This is a bit &amp;ldquo;combed&amp;rdquo; INITIAL version of the document; needs further edition and format.&lt;br&gt;The &lt;a href=&#34;https://github.com/ioos/conventions-for-observing-asset-identifiers/blob/master/doc/ioos_assets_wiki_upd_v0_5_draft.md&#34;&gt;UPDATED version of the Convention for the framework of IOOS SOS Milestone 1.0&lt;/a&gt; has been considered a DISCUSSION PAPER until approval. &lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
 </description>
         </item>
       
@@ -35,11 +32,9 @@
           <guid>http://ioos.github.io/conventions-for-observing-asset-identifiers/ioos_assets_wiki_init_v0_1/</guid>
           <description>
 
+&lt;p&gt;&lt;em&gt;Many assets have numbers or labels assigned to them by an external authority. For example, every weather buoy has a World Meteorological Organization (WMO) number. The IOOS identifiers allow for and make use of such identifiers. However, rather than merely using the number (e.g., 42001) which could refer to a buoy in the Gulf of Mexico or the postal code for Paducah, Kentucky or the section of the California Vehicle Code that describes fines imposed for moving violations, the IOOS identifiers add some semantics to indicate (a) the authority which assigned the number or name and (b) that the asset is somehow associated with IOOS. Being &amp;ldquo;associated with IOOS&amp;rdquo; in this context typically means that data from that asset could be discovered or accessed through the IOOS data management layer.&lt;/em&gt;&lt;/p&gt;
+
 &lt;p&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;introduction:ebe5944de060b6752ee4a92e470e3ed5&#34;&gt;Introduction&lt;/h1&gt;
-
-&lt;p&gt;Many assets have numbers or labels assigned to them by an external authority. For example, every weather buoy has a World Meteorological Organization (WMO) number. The IOOS identifiers allow for and make use of such identifiers. However, rather than merely using the number (e.g., 42001) which could refer to a buoy in the Gulf of Mexico or the postal code for Paducah, Kentucky or the section of the California Vehicle Code that describes fines imposed for moving violations, the IOOS identifiers add some semantics to indicate (a) the authority which assigned the number or name and (b) that the asset is somehow associated with IOOS. Being &amp;ldquo;associated with IOOS&amp;rdquo; in this context typically means that data from that asset could be discovered or accessed through the IOOS data management layer.&lt;/p&gt;
 
 &lt;h1 id=&#34;revision-history:ebe5944de060b6752ee4a92e470e3ed5&#34;&gt;Revision History&lt;/h1&gt;
 
@@ -60,7 +55,7 @@
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;0.1  &lt;/td&gt;
+&lt;td&gt;0.1.0  &lt;/td&gt;
 &lt;td&gt;Updated draft&lt;/td&gt;
 &lt;td&gt;2013-12-06&lt;/td&gt;
 &lt;/tr&gt;
