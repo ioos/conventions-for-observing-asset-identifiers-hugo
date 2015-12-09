@@ -4,6 +4,7 @@ type = "post"
 draft = false
 sidebar = true
 Title = "ABOUT: IOOS Convention for Asset Identification"
+date = 2014-08-04T07:56:39Z
 +++
 
 <!-- For a single homepage put in FrontMatter url = "index.html" -->
