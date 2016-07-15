@@ -25,9 +25,11 @@
 				</footer>
 			{{else}}
 				{{ .Summary }} 
-				<footer>
-					<a href='{{ .Permalink }}'><nobr><i>Read more ></i></nobr></a>
-				</footer>
+				{{ if .Truncated }}
+					<footer>
+						<a href='{{ .Permalink }}'><nobr><i>Read more ></i></nobr></a>
+					</footer>
+				{{end}}
 			{{end}}
 		{{ end }}
 <!--

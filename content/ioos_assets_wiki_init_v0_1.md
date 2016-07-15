@@ -1,6 +1,6 @@
 +++
 draft = false
-title = "IOOS Convention for Asset Identification"
+title = "IOOS Convention for Asset Identification (current version)"
 type = "post"
 date = 2014-08-04T08:10:23Z
 sidebar = true
@@ -8,7 +8,7 @@ weight = "20"
 +++
 
 
-_Many assets have numbers or labels assigned to them by an external authority. For example, every weather buoy has a World Meteorological Organization (WMO) number. The IOOS identifiers allow for and make use of such identifiers. However, rather than merely using the number (e.g., 42001) which could refer to a buoy in the Gulf of Mexico or the postal code for Paducah, Kentucky or the section of the California Vehicle Code that describes fines imposed for moving violations, the IOOS identifiers add some semantics to indicate (a) the authority which assigned the number or name and (b) that the asset is somehow associated with IOOS. Being "associated with IOOS" in this context typically means that data from that asset could be discovered or accessed through the IOOS data management layer._
+_This document provides a guidance for the asset identification process. For the data to be discoverable and accessible through the IOOS Data Catalog, all observing assets must be identified in accord with the present IOOS Convention._
 <!--more-->
 <br><br>
 
@@ -22,7 +22,7 @@ _Many assets have numbers or labels assigned to them by an external authority. F
 |0.1.0  |Updated draft|2013-12-06 | |
 
 
-<p style="color:red; font-size:120%; border:3px solid red; padding:15px;"> This is a bit "combed" INITIAL version of the document; needs further edition and format.<br>The [UPDATED version of the Convention for the framework of IOOS SOS Milestone 1.0](https://github.com/ioos/conventions-for-observing-asset-identifiers/blob/master/doc/ioos_assets_wiki_upd_v0_5_draft.md) has been considered a DISCUSSION PAPER until approval. </p>
+<p style="color:red; font-size:120%; border:3px solid red; padding:15px;"> This is a bit "combed" INITIAL version of the document; needs further edition and format.<br>The [UPDATED version of the Convention for the framework of IOOS SOS Milestone 1.0](https://github.com/ioos/conventions-for-observing-asset-identifiers/blob/master/doc/ioos_assets_wiki_upd_v0_8_draft.md) has been considered a DISCUSSION PAPER until approval. </p>
 <p>
 <br>
 
@@ -218,7 +218,7 @@ Observer (i.e. _**urn:ioos:observer:...**_) seems just as good as other choices.
 
 I think it would be good to also indicate either (1) the general observing protocol or (2) the specific type of observation, as follows: 
 
-#### _(1) General observing protocol_ ####
+### General observing protocol ###
 
 If visual estimates are made according to, for example, the [NWS Observing Handbook No. 1 (2004)](http://www.vos.noaa.gov/ObsHB-508/ObservingHandbook1_2004_508_compliant.pdf), then perhaps the so-called “sensor” ID could be something like 
 
@@ -230,7 +230,7 @@ http://www.vos.noaa.gov/ObsHB-508/ObservingHandbook1_2004_508_compliant.pdf
 
 This avoids any need for additional interpretation. In the IOOS water quality project we have seen another case where the “metadata” about the measurement procedure is a PDF file containing descriptions of laboratory procedures. 
 
-#### _(2) Specific type of observation_ ####
+### Specific type of observation ###
 
 The identifier could include the type of observation made by the human. 
 
