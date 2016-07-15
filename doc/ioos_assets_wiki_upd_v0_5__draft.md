@@ -1,7 +1,3 @@
-
-
-<!-- IOOS Convention for Observing Asset Identifiers -->
-
 # IOOS Convention for Observing Asset Identifiers (Next Draft)
 
 Authors: Jeff de La Beaujardière, NOAA/NESDIS/Technology Planning and Integration Office
@@ -34,13 +30,14 @@ or accessed through the IOOS data management layer \[Needs reference\].
 | 0.5     | Updated for Milestone 1.0| 2014-08-31 |
 
 ## Informative Examples
+
 For the sake of illustration, we first provide examples of identifiers in use by IOOS. Later sections of this
 document constitute the actual specification of those identifiers.  In the case of conflict or ambiguity, the
 specification sections take precedence over these examples.
 
 | Asset      |  Identifier   |
 |--------    | ------------  |
-| WMO buoy 42001 | **`urn:ioos:station:wmo:42001`**|
+| WMO buoy 42001 | __`urn:ioos:station:wmo:42001`__ |
 |Wave sensor on WMO buoy 42001|__`urn:ioos:station:wmo:42001:wpm1`__ |
 |CO-OPS station cb0102 |__`urn:ioos:station:NOAA.NOS.CO-OPS:cb0102`__ |
 |Active water level sensors within CO-OPS network of stations | __`urn:ioos:network:NOAA.NOS.CO-OPS:WaterLevelActive`__ |
@@ -80,7 +77,7 @@ but may appear in uppercase or mixed-case.
 
 The general pattern for IOOS asset identifiers is
 
-**`urn:ioos:asset_type:authority:label[:component]`**
+__`urn:ioos:asset_type:authority:label[:component]`__
 
 which consists of the following fields delimited by __`:`__.
 
@@ -260,8 +257,3 @@ __`urn:ioos:survey:ss:1`__
 or
  
 __`urn:ioos:survey:sst_indicator:negative_intake_measurement`__
-
-
-<br>
-<br>
-
