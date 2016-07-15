@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile"> 
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>
+    
+      IOOS Convention for Asset Identification (next draft) &middot; IOOS Observing Asset Identifiers
+    
+  </title>
+
+  
+  <link rel="stylesheet" href="http://ioos.github.io/conventions-for-observing-asset-identifiers/css/poole.css">
+  <link rel="stylesheet" href="http://ioos.github.io/conventions-for-observing-asset-identifiers/css/syntax.css">
+  <link rel="stylesheet" href="http://ioos.github.io/conventions-for-observing-asset-identifiers/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://ioos.github.io/conventions-for-observing-asset-identifiers/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="http://ioos.github.io/conventions-for-observing-asset-identifiers/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://ioos.github.io/conventions-for-observing-asset-identifiers/atom.xml">
+</head>
+
+
+  <body>
+
+    
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p align="center">&middot; <a href="http://ioos.github.io/" target="_blank">IOOS GitHub Pages</a> &middot; <br>
+	a collection of IOOS documentation and software</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="http://ioos.github.io/conventions-for-observing-asset-identifiers/">Home</a>
+
+
+  <div class="sidebar-item">
+    <p>Documents</p>
+  </div>
+
+<p style="text-align:right"> 
+    
+    
+      
+        <a class="sidebar-nav-item-list " href="http://ioos.github.io/conventions-for-observing-asset-identifiers/about/">ABOUT: IOOS Convention for Asset Identification</a>
+      
+    
+      
+        <a class="sidebar-nav-item-list " href="http://ioos.github.io/conventions-for-observing-asset-identifiers/ioos_assets_wiki_init_v0_1/">IOOS Convention for Asset Identification (current version)</a>
+      
+    
+      
+        <a class="sidebar-nav-item-list  active " href="http://ioos.github.io/conventions-for-observing-asset-identifiers/ioos_assets_wiki_upd_v0_8_draft/">IOOS Convention for Asset Identification (next draft)</a>
+      
+    
+</p>
+<p style="text-align:right">
+      
+</p>
+
+    <a class="sidebar-nav-item" href="https://github.com/ioos/conventions-for-observing-asset-identifiers">GitHub repository <br> (currently on 'master')</a>
+    <a class="sidebar-nav-item" href="https://github.com/ioos/conventions-for-observing-asset-identifiers/archive/master.zip">Download repository</a>
+
+
+	</nav>
+
+  <div class="sidebar-item">
+    <span>&copy; 2014 U.S. IOOS. Rights reserved</span>
+  </div>
+</div>
+
+
+    
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h2 class="masthead-title">
+		  <a href="http://ioos.github.io/conventions-for-observing-asset-identifiers/" title="Home"> IOOS Observing Asset Identifiers &middot; 
+		  <small>Conventions for Asset Identification</small>
+		  <img src="http://ioos.github.io/conventions-for-observing-asset-identifiers/images/ioos_blue2.png" alt="Smiley face" align="right" /></a>
+		  </h2>
+        </div>
+      </div>
+
+      <div class="container content">
+
+
+<div class="post">
+  <h1 class="post-title">IOOS Convention for Asset Identification (next draft)</h1>
+    <div id="toc" class="well col-md-4 col-sm-6">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#revision-history:0476a3a1fa6c1e924774e451ea0e88d7">Revision History</a></li>
+<li><a href="#contributors:0476a3a1fa6c1e924774e451ea0e88d7">Contributors</a></li>
+<li><a href="#introduction:0476a3a1fa6c1e924774e451ea0e88d7">Introduction</a></li>
+<li><a href="#informative-examples:0476a3a1fa6c1e924774e451ea0e88d7">Informative Examples</a></li>
+<li><a href="#general-identifier-convention:0476a3a1fa6c1e924774e451ea0e88d7">General Identifier Convention</a>
+<ul>
+<li><a href="#use-of-uniform-resource-names:0476a3a1fa6c1e924774e451ea0e88d7">Use of Uniform Resource Names</a></li>
+<li><a href="#case-insensitivity:0476a3a1fa6c1e924774e451ea0e88d7">Case-insensitivity</a></li>
+<li><a href="#identifier-pattern:0476a3a1fa6c1e924774e451ea0e88d7">Identifier Pattern</a>
+<ul>
+<li><a href="#asset-type:0476a3a1fa6c1e924774e451ea0e88d7">Asset Type</a></li>
+<li><a href="#authority:0476a3a1fa6c1e924774e451ea0e88d7">Authority</a></li>
+<li><a href="#label:0476a3a1fa6c1e924774e451ea0e88d7">Label</a></li>
+<li><a href="#component:0476a3a1fa6c1e924774e451ea0e88d7">Component</a></li>
+<li><a href="#discriminant:0476a3a1fa6c1e924774e451ea0e88d7">Discriminant</a></li>
+<li><a href="#functional-parameters:0476a3a1fa6c1e924774e451ea0e88d7">Functional Parameters</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#convention-for-specific-asset-types:0476a3a1fa6c1e924774e451ea0e88d7">Convention for Specific Asset Types</a>
+<ul>
+<li><a href="#station-identifiers:0476a3a1fa6c1e924774e451ea0e88d7">Station Identifiers</a></li>
+<li><a href="#sensor-identifiers:0476a3a1fa6c1e924774e451ea0e88d7">Sensor Identifiers</a>
+<ul>
+<li><a href="#glider-identifier:0476a3a1fa6c1e924774e451ea0e88d7">Glider Identifier</a></li>
+</ul></li>
+<li><a href="#survey-identifiers:0476a3a1fa6c1e924774e451ea0e88d7">Survey Identifiers</a>
+<ul>
+<li><a href="#general-observing-protocol:0476a3a1fa6c1e924774e451ea0e88d7">General observing protocol</a></li>
+<li><a href="#specific-type-of-observation:0476a3a1fa6c1e924774e451ea0e88d7">Specific type of observation</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+  
+
+<p><em>This <b>DRAFT</b> document is a proposed update to the current IOOS Convention for Asset Identification; it is published for discussion within IOOS community about the enhanced identification of <b>gliders</b>, and <b>sensors</b>.</em></p>
+
+<p><br><br></p>
+
+<h1 id="revision-history:0476a3a1fa6c1e924774e451ea0e88d7">Revision History</h1>
+
+<table>
+<thead>
+<tr>
+<th align="left">Version</th>
+<th align="left">Description</th>
+<th align="left">Date</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">0.0.1</td>
+<td align="left">First draft</td>
+<td align="left">2010-12-22</td>
+</tr>
+
+<tr>
+<td align="left">0.1</td>
+<td align="left">Updated draft</td>
+<td align="left">2013-12-06</td>
+</tr>
+
+<tr>
+<td align="left">0.5</td>
+<td align="left">Updated for Milestone 1.0</td>
+<td align="left">2014-08-31</td>
+</tr>
+
+<tr>
+<td align="left">0.8</td>
+<td align="left">Updated to enhance sensor identification</td>
+<td align="left">2016-07-15</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="contributors:0476a3a1fa6c1e924774e451ea0e88d7">Contributors</h1>
+
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Role</th>
+<th align="left">Association</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">Jeff de La Beaujardière</td>
+<td align="left">Author</td>
+<td align="left">NOAA/NESDIS/Technology Planning and Integration Office</td>
+</tr>
+
+<tr>
+<td align="left">Derrick Snowden</td>
+<td align="left">Contributor</td>
+<td align="left">U.S. IOOS Office</td>
+</tr>
+
+<tr>
+<td align="left">Carmel Ortiz</td>
+<td align="left">Contributor</td>
+<td align="left">U.S. IOOS Office</td>
+</tr>
+
+<tr>
+<td align="left">Alex Birger</td>
+<td align="left">Contributor</td>
+<td align="left">U.S. IOOS Office</td>
+</tr>
+
+<tr>
+<td align="left">Anna Milan</td>
+<td align="left">Contributor</td>
+<td align="left">NOAA National Geophysical Data Center (NGDC)</td>
+</tr>
+</tbody>
+</table>
+
+<p><br>
+<br></p>
+
+<p><p style="color:red; font-size:150%; border:3px solid red; padding:15px;"> <b>DISCLAIMER:</b> This publication is a <b>Discussion Paper</b>, and by no means it should be referred to as an official IOOS document. </p>
+<p>
+<br></p>
+
+<h1 id="introduction:0476a3a1fa6c1e924774e451ea0e88d7">Introduction</h1>
+
+<p>This document describes the convention used by the Integrated Ocean Observing System (IOOS) program to assign an identifier to IOOS-related observing assets. The observing asset may include hardware units (like measurement platforms and sensors), processes (such as surveys) or their combination. An identifier is used as the name by which further metadata about the asset may be requested from IOOS web services. An IOOS identifier is the name that IOOS web services uses for the asset, but each asset may also have other names assigned by other communities.</p>
+
+<p>Many assets have codes or labels assigned to them by an external authority. For example, every weather buoy has a <a href="http://www.wmo.int/pages/prog/amp/mmop/wmo-number-rules.html">World Meteorological Organization (WMO) number</a>; every registered vessel has an <a href="http://www.imonumbers.lrfairplay.com">International Maritime Organization (IMO) number</a> assigned by Lloyd&rsquo;s register. The IOOS identifiers allow for and make use of such codes; however, the IOOS identifiers add some semantics to indicate</p>
+
+<ul>
+<li>the authority which assigned the number or name;</li>
+<li>the asset&rsquo;s association with IOOS;</li>
+<li>the asset application&rsquo;s specifics for measuring of an observed phenomenon.</li>
+</ul>
+
+<p>The <em><strong>&ldquo;association with IOOS&rdquo;</strong></em> in this context typically means that the asset gets exposed through one or more of web services implemented by regional and federal data providers and registered in the IOOS Service Registry, and the asset is the source of a data that can be discovered through the IOOS Catalog.</p>
+
+<p>The <em><strong>&ldquo;asset application&rsquo;s specifics&rdquo;</strong></em> generally means that along with a hardware component, the asset identifier encompasses some associated processing method or procedure. The inclusion of the basic procedure description into the asset identifier allows to facilitate the data discovery for some specific use cases such as repeated deployment of the same asset, or use of multiple identical assets for observing the identical phenomenon with various reference datums and/or post-processing applied.</p>
+
+<h1 id="informative-examples:0476a3a1fa6c1e924774e451ea0e88d7">Informative Examples</h1>
+
+<p>For the sake of illustration, the following examples of identifiers are currently in use by IOOS. In the case of conflict or ambiguity, the specification sections take precedence over these examples.</p>
+
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Identifier</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>WMO buoy 41012</td>
+<td><strong><code>urn:ioos:station:wmo:41012</code></strong></td>
+</tr>
+
+<tr>
+<td>Wave sensor on WMO buoy 41012</td>
+<td><strong><code>urn:ioos:sensor:wmo:41012:wpm1</code></strong></td>
+</tr>
+
+<tr>
+<td>CO-OPS station cb0102</td>
+<td><strong><code>urn:ioos:station:NOAA.NOS.CO-OPS:cb0102</code></strong></td>
+</tr>
+
+<tr>
+<td>Active water level sensors within CO-OPS network of stations</td>
+<td><strong><code>urn:ioos:network:NOAA.NOS.CO-OPS:WaterLevelActive</code></strong></td>
+</tr>
+
+<tr>
+<td>Water level sensor at CO-OPS station 8454000</td>
+<td><strong><code>urn:ioos:sensor:NOAA.NOS.CO-OPS:8454000:D1</code></strong></td>
+</tr>
+
+<tr>
+<td>Nortek Acoustic Doppler Profiler sensor that is measuring water currents and/or waves and is mounted on the CO-OPS cb0201 station</td>
+<td><strong><code>urn:ioos:sensor:NOAA.NOS.CO-OPS:cb0201:Nortek-ADP-514</code></strong></td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="general-identifier-convention:0476a3a1fa6c1e924774e451ea0e88d7">General Identifier Convention</h1>
+
+<p><a name="anchor1"></a><br></p>
+
+<h2 id="use-of-uniform-resource-names:0476a3a1fa6c1e924774e451ea0e88d7">Use of Uniform Resource Names</h2>
+
+<p>An IOOS identifier is <a href="https://www.ietf.org/rfc/rfc3986.txt">Uniform Resource Identifier (URI)</a>. URIs are commonly used as identifiers in the Internet’s information architecture; an introductory description of URIs may be found on
+<a href="http://en.wikipedia.org/wiki/Uniform_Resource_Identifier">Wikipedia</a>. In fact, IOOS identifiers are based on a specific form of URI, which is called a Uniform Resource Name (URN), which was designed for the identification of resources in particular namespaces. The URN syntax is described in the <a href="http://tools.ietf.org/html/rfc2141">Internet Engineering Task Force (IETF) Request for Comments (RFC) 2141</a>; the definitions and restrictions established by the RFC 2141 determine the syntactic structure of the IOOS identifiers.</p>
+
+<p>All URIs assigned by IOOS begin with the string <strong><code>urn:ioos:</code></strong>, followed by one or more fields also separated by colons (<code>:</code>). The initial <strong><code>urn:</code></strong> indicates that the URI is indeed a URN. The following <strong><code>ioos:</code></strong> indicates that the URN is in the IOOS namespace.</p>
+
+<p><em><strong>NOTE</strong>: The <strong><code>ioos</code></strong> namespace has not been formally registered with IANA; therefore, it is rather informal, community-wide namespace.</em></p>
+
+<p>The additional fields may only include letters and numbers (<em><strong>A-Z</strong></em>, <em><strong>a-z</strong></em>, <em><strong>0-9</strong></em>) and the following characters: _<strong>( ) + , - . = @ ; $ _ ! *</strong>_</p>
+
+<p>Special characters not in the foregoing list must be represented using hexadecimal encoding as <em><strong>%xx</strong></em>, where <strong>xx</strong> represents a two-digit hex value. The use of such characters in IOOS URNs is not recommended.</p>
+
+<h2 id="case-insensitivity:0476a3a1fa6c1e924774e451ea0e88d7">Case-insensitivity</h2>
+
+<p>IOOS URNs are considered to be case-insensitive. The fields in IOOS URNs are customarily lower-case but may appear in UPPERCASE or MiXedCase. Example: <code>urn:ioos:ABC</code> and <code>urn:ioos:abc</code> refer to the same asset. This is more restrictive than the RFC 2141 provision; however, it is permitted.</p>
+
+<h2 id="identifier-pattern:0476a3a1fa6c1e924774e451ea0e88d7">Identifier Pattern</h2>
+
+<p>The general pattern for IOOS asset identifiers is</p>
+
+<p><strong><code>urn:ioos:asset_type:authority:label[:component][:discriminant][#functional_parameters]</code></strong>,</p>
+
+<p>and encompasses of the following fields:</p>
+
+<blockquote>
+<p><strong><code>urn:ioos</code></strong> (required) - a fixed string indicating this is an IOOS URN;</p>
+
+<p><strong><code>asset_type</code></strong> (required) - a variable indicating the type of asset being identified;</p>
+
+<p><strong><code>authority</code></strong> (required) - an abbreviation or name for the organization that assigned the label;</p>
+
+<p><strong><code>label</code></strong> (required) - the number or label that was assigned by the authority to the asset;</p>
+
+<p><strong><code>component</code></strong> (optional) - a name or ID of a specific component of a certain asset;</p>
+
+<p><strong><code>discriminant</code></strong> (optional) - the component&rsquo;s sub-name for resolving duplicate components;</p>
+
+<p><strong><code>functional_parameters</code></strong> - an extended metadata to represent various processes associated with the component.</p>
+</blockquote>
+
+<p>The following sections explain in details the use of all the fields. The general requirement of the Convention is that the values of the fields have to be governed by a recognized controlled vocabulary; although some vocabularies are recommended hereinafter, other controlled vocabularies may be used as well.</p>
+
+<h3 id="asset-type:0476a3a1fa6c1e924774e451ea0e88d7">Asset Type</h3>
+
+<p>The <strong><code>asset_type</code></strong> field indicates the type of asset to which this identifier applies. The following values for <strong><code>asset_type</code></strong> are currently recognized by IOOS:</p>
+
+<p><strong>glider</strong></p>
+
+<blockquote>
+<p>An autonomous vehicle that slowly (~20km/day) propels itself forward with very low power consumption by exploiting a controlled buoyancy in conjunction with wings and has a rudder for steering. Gliders either can autonomously navigate crossing large horizontal areas while vertically undulating the water column or can undulate at a near-fixed position acting as a virtual mooring.</p>
+</blockquote>
+
+<p><strong>station</strong></p>
+
+<blockquote>
+<p>A fixed platform, installation, or nominally-constant position where measurements are performed.
+Examples include: a water-level gauge mounted on a pier; a moored buoy that moves within a known watch radius of the nominal mooring location; an OceanSITES deep-water monitoring location; a site at which water quality samples are taken.</p>
+</blockquote>
+
+<p><strong>network</strong></p>
+
+<blockquote>
+<p>A network of stations defined above.</p>
+</blockquote>
+
+<p><strong>sensor</strong></p>
+
+<blockquote>
+<p>A device that detects or measures observed physical phenomena and records, indicates, or otherwise responds to it. Sensor typically is attached to a station or glider.
+Examples include: a water-level sensor; a temperature sensor; an anemometer; a current meter.<br></p>
+</blockquote>
+
+<p><strong>survey</strong></p>
+
+<blockquote>
+<p>A visual observation, measurement or collecting samples by a human observer performed at a station or from a ship for a follow-up analyses in the laboratory. Example: a quarterly visit to a known location to collect water for chemical analysis; an assessment by a diver of the species present in a particular location, etc.</p>
+</blockquote>
+
+<p>Additional <strong><code>asset_type</code></strong> values may be added by IOOS as needed. The valid values in the <strong><code>asset_type</code></strong> field may be drawn from the following vocabularies or any other community-recognized controlled vocabulary:</p>
+
+<ul>
+<li><a href="http://mmisw.org/orr/#http://mmisw.org/ont/mmi/device">Marine Metadata Initiative Device Ontology</a></li>
+<li><a href="http://mmisw.org/orr/#http://vocab.ndg.nerc.ac.uk/list/L221/current">BODC Instruments List</a></li>
+<li><a href="http://gcmdservices.gsfc.nasa.gov/static/kms/instruments/instruments.csv">GCMD Instrument types</a></li>
+</ul>
+
+<h3 id="authority:0476a3a1fa6c1e924774e451ea0e88d7">Authority</h3>
+
+<p>The <strong><code>authority</code></strong> field indicates the organization that assigned the label for this asset. There is no fixed set of values, because additional authorities may become relevant as new observing systems are connected to IOOS. However, the same abbreviation or name should be used for all instances of a particular authority. These abbreviations are case insensitive.  Here are a few examples of how the <strong><code>authority</code></strong> field is currently used in IOOS:</p>
+
+<p><strong>wmo</strong></p>
+
+<blockquote>
+<p>World Meteorological Association.</p>
+</blockquote>
+
+<p><strong>noaa.nos.co-ops</strong></p>
+
+<blockquote>
+<p>Center for Operational Oceanographic Products and Services (COOPS) in the National Ocean Service (NOS) of the U.S. National Oceanic and Atmospheric Administration (NOAA).</p>
+</blockquote>
+
+<p><strong>usace</strong></p>
+
+<blockquote>
+<p>U.S. Army Corps of Engineers.</p>
+</blockquote>
+
+<p><strong>fiu</strong></p>
+
+<blockquote>
+<p>Florida International University.</p>
+</blockquote>
+
+<p><strong>test</strong></p>
+
+<blockquote>
+<p>Temporary service instance using for test.</p>
+</blockquote>
+
+<p>The valid values in the <strong><code>authority</code></strong> field may be drawn from the following vocabularies or any other community-recognized controlled vocabulary:</p>
+
+<ul>
+<li>GCMD Keywords
+
+<ul>
+<li>Data Centers: <a href="http://gcmdservices.gsfc.nasa.gov/static/kms/providers/providers.csv">http://gcmdservices.gsfc.nasa.gov/static/kms/providers/providers.csv</a></li>
+<li>Projects: <a href="http://gcmdservices.gsfc.nasa.gov/static/kms/projects/projects.csv">http://gcmdservices.gsfc.nasa.gov/static/kms/projects/projects.csv</a></li>
+</ul></li>
+</ul>
+
+<h3 id="label:0476a3a1fa6c1e924774e451ea0e88d7">Label</h3>
+
+<p>The <strong><code>label</code></strong> is a number or string assigned by the Authority to the asset. Allowed values are defined by the particular authority. The only restrictions are that</p>
+
+<ul>
+<li>the characters used must not conflict with the <a href="#anchor1">URN specification</a>, and</li>
+<li>labels within the scope of a given authority must be unique.</li>
+</ul>
+
+<h3 id="component:0476a3a1fa6c1e924774e451ea0e88d7">Component</h3>
+
+<p>The <strong><code>component</code></strong> field is used to label sub-assets in order to distinguish between different sub-assets associated with the same parent asset. The <strong><code>component</code></strong> value must be unique for each parent asset <strong><code>asset_type:authority:label</code></strong>.</p>
+
+<h3 id="discriminant:0476a3a1fa6c1e924774e451ea0e88d7">Discriminant</h3>
+
+<p>The <strong><code>discriminant</code></strong> field is a free-format text string that provides an additional means for resolving duplication of assets or sub-assets that may result from multiple deployments of the same asset, use of multiple identical sub-assets (e.g. sensors) at the same parent asset (e.g. station). The <strong><code>discriminant</code></strong> ensures the uniqueness of the multiple (sub-)asset&rsquo;s identifiers within the single asset&rsquo;s domain.<a name="anchor2"></a><br></p>
+
+<h3 id="functional-parameters:0476a3a1fa6c1e924774e451ea0e88d7">Functional Parameters</h3>
+
+<p>The optional <strong><code>functional_parameters</code></strong> field provides extended metadata that depicts various processes associated with the component. Adding this metadata allows unambiguous identification of the data that is collected through the measurement of the identical phenomenon at the same station with different reference datums or post-processing methods. Although this field is not required, in cases like these it is the only way to identify the data that is normally impossible to represent without additional parameters. The functional parameters are especially valuable for conversing the netCDF attributes to IOOS SOS XML representation.</p>
+
+<p>Examples of the <strong><code>functional_parameters</code></strong> field values:</p>
+
+<ul>
+<li><a href="http://cfconventions.org/cf-conventions/v1.6.0/cf-conventions.html#cell-methods">Cell Methods</a>:
+
+<ul>
+<li><strong><code>#cell_methods=time:mean;interval=pt24h</code></strong> (mean over time)</li>
+<li><strong><code>#cell_methods=time:standard_deviation</code></strong> (standard deviation)</li>
+</ul></li>
+<li><a href="http://www.ngs.noaa.gov/datums/vertical/">Vertical Datums</a>
+
+<ul>
+<li><strong><code>#vertical_datum=mllw</code></strong> (tidal MLLW datum)</li>
+<li><strong><code>#vertical_datum=navd88</code></strong> (geodetic datum NAVD 88)</li>
+</ul></li>
+</ul>
+
+<p>Various parameters may be combined in one <strong><code>functional_parameters</code></strong> field, e.g.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><code>#vertical_datum=mllw;cell_methods=time:mean;interval=pt12h</code></strong> (MLLW datum; mean over 12 hours processing)</p>
+
+<h1 id="convention-for-specific-asset-types:0476a3a1fa6c1e924774e451ea0e88d7">Convention for Specific Asset Types</h1>
+
+<h2 id="station-identifiers:0476a3a1fa6c1e924774e451ea0e88d7">Station Identifiers</h2>
+
+<p>The pattern for IOOS platform (station) identifiers is</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><code>urn:ioos:station:authority:label[:discriminant]</code></strong>.</p>
+
+<p>Station identifiers do not include a <strong><code>component</code></strong> field but may include a <strong><code>discriminant</code></strong> to identify, for example, a relocation of a mooring buoy or redeployment to the same location after sensor replacement.</p>
+
+<h2 id="sensor-identifiers:0476a3a1fa6c1e924774e451ea0e88d7">Sensor Identifiers</h2>
+
+<p>For the purpose of this Convention, the sensors are always associated with a certain station, and are used to measure one or more observed quantities at or adjacent to the station location. The pattern for IOOS sensor identifiers is</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><code>urn:ioos:sensor:authority:label:component[:discriminant][#functional_parameters]</code></strong></p>
+
+<p>The <strong><code>authority</code></strong> and <strong><code>label</code></strong> portions of the sensor&rsquo;s identifier are defined by the station the sensor is associated with; the <strong><code>component</code></strong> and <strong><code>discriminant</code></strong> fields combine into a unique sensor&rsquo;s name that distinguishes it from the other sensors at the same station.</p>
+
+<p>The <strong><code>component</code></strong> field may contain the make and model of the sensor (e.g., <code>SONTEK-ADP-419</code>), the phenomenon observed by that sensor (e.g., <em><code>salinity</code></em>), or an arbitrary label used by the organization that operates the sensor (e.g., <code>A1</code>). Whenever possible, the value from the <a href="http://cfconventions.org/standard-names.html">CF Standard Names</a> table must be used as an observed property name (e.g., <em><code>sea_water_temperature</code></em> rather than <em><code>SeaTemp</code></em>).</p>
+
+<p>The <strong><code>discriminant</code></strong> field provides for unique identification of multiple sensors of the same type attached to the same platform for measuring the identical phenomenon, e.g. <em><code>sea_water_temperature</code></em> or <em><code>direction_of_sea_water_velocity</code></em> on different sides of the platform. Each sensor will have an identifier that includes the label for the platform and the label for the sensor; however, since the sensors and the observed properties are identical, it is impossible to distinguish one from another without providing additional information on the sensors such as sensor&rsquo;s location at the platform, time of deployment, serial number, etc. The resulting identifier will be perfectly unique within the platform:</p>
+
+<ul>
+<li><strong><code>urn:ioos:station:authority:label_station:sea_water_temperature:east</code></strong>,</li>
+<li><strong><code>urn:ioos:station:authority:label_station:sea_water_temperature:bottom</code></strong>,</li>
+<li><strong><code>urn:ioos:station:authority:label_station:sea_water_temperature:nortek_adp_514</code></strong></li>
+</ul>
+
+<p>The <strong><code>functional_parameters</code></strong> field allows distinguishing of the measurements done by the same sensor but associated with different reference parameters or post-processing methods as described in the <a href="#anchor2">&ldquo;Functional Parameters&rdquo;</a> section above.</p>
+
+<h3 id="glider-identifier:0476a3a1fa6c1e924774e451ea0e88d7">Glider Identifier</h3>
+
+<p>The pattern for IOOS glider identifiers is similar to the station one</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><code>urn:ioos:station:authority:label[:discriminant]</code></strong>.</p>
+
+<p>As the same glider is typically associated with multiple deployments, the <strong><code>discriminant</code></strong> field in the glider&rsquo;s identifier adds unique information about each deployment like a deployment number, time, starting point coordinates, etc.; the complete identifier will allow unambiguous resolution of any of the glider&rsquo;s missions.</p>
+
+<p>Since no field can contain <strong><code>:</code></strong>, the date/time information cannot be reported in the ISO 8601 format, and  has to be provided in <em><strong>YYYYMMDDTHHMM</strong></em> format, e.g.</p>
+
+<p><strong><code>urn:ioos:glider:edu.rutgers.marine:unit_191:20150105T1443</code></strong>.</p>
+
+<h2 id="survey-identifiers:0476a3a1fa6c1e924774e451ea0e88d7">Survey Identifiers</h2>
+
+<p>A survey identifier URN shall include the <strong><code>authority</code></strong> and <strong><code>label</code></strong> fields of the station or a ship, and may include a <strong><code>component</code></strong> field to distinguish it from other surveys at the same station or ship:</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><code>urn:ioos:survey:authority:label[:component]</code></strong></p>
+
+<p>For visual observation purpose, the <strong><code>authority</code></strong>,  <strong><code>label</code></strong>, and <strong><code>component</code></strong> fields may also indicate either (1) the general observing protocol or (2) the specific type of observation.</p>
+
+<h3 id="general-observing-protocol:0476a3a1fa6c1e924774e451ea0e88d7">General observing protocol</h3>
+
+<p>If visual estimates are made according to some established observing protocol, then the <strong><code>authority</code></strong> field may contain a reference to the document that describes the protocol. For example, if observation was made by the <a href="http://www.vos.noaa.gov/ObsHB-508/ObservingHandbook1_2004_508_compliant.pdf">NWS Observing Handbook No. 1 (2004)</a>,
+then the survey identifier will look as follows:</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><code>urn:ioos:survey:nws_observing_handbook_2004:label[:component]</code></strong></p>
+
+<p>If a simple reference to the document is sufficient to avoid any need for additional interpretation, it is acceptable to identify the survey with just the URL of the document describing the observing protocol, laboratory procedures, etc.
+In the case of the NWS Observing Handbook, for example, the following URL may play a role of the survey ID:</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><a href="http://www.vos.noaa.gov/ObsHB-508/ObservingHandbook1_2004_508_compliant.pdf">http://www.vos.noaa.gov/ObsHB-508/ObservingHandbook1_2004_508_compliant.pdf</a></strong></p>
+
+<h3 id="specific-type-of-observation:0476a3a1fa6c1e924774e451ea0e88d7">Specific type of observation</h3>
+
+<p>The survey identifier may include the type of observation made by the human. For example, in the NWS Handbook, Chapter 2, page 2-7 says that &ldquo;iw&rdquo; is the &ldquo;wind speed indicator&rdquo;, and that it has values 0, 1, 3, 4 depending on how the wind speed was estimated or measured, with &ldquo;3&rdquo; being &ldquo;wind speed estimated in knots.&rdquo; For such an observation, the survey identifier may use the observation code instead of <strong><code>authority</code></strong>,  <strong><code>label</code></strong>, and <strong><code>component</code></strong> fields:</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><code>urn:ioos:survey:iw:3</code></strong></p>
+
+<p>or in a more verbose manner:</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><code>urn:ioos:survey:wind_speed_indicator:estimated_in_knots</code></strong></p>
+
+<p>Similarly, from p.2-76, sea surface temperature measurement can be identified as</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><code>urn:ioos:survey:ss:1</code></strong></p>
+
+<p>or</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><code>urn:ioos:survey:sst_indicator:negative_intake_measurement</code></strong></p>
+
+</div>
+
+
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  </body>
+</html>
+

@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <title>
     
-      IOOS Convention for Asset Identification &middot; IOOS Observing Asset Identifiers
+      IOOS Convention for Asset Identification (current version) &middot; IOOS Observing Asset Identifiers
     
   </title>
 
@@ -56,7 +56,11 @@
       
     
       
-        <a class="sidebar-nav-item-list  active " href="http://ioos.github.io/conventions-for-observing-asset-identifiers/ioos_assets_wiki_init_v0_1/">IOOS Convention for Asset Identification</a>
+        <a class="sidebar-nav-item-list  active " href="http://ioos.github.io/conventions-for-observing-asset-identifiers/ioos_assets_wiki_init_v0_1/">IOOS Convention for Asset Identification (current version)</a>
+      
+    
+      
+        <a class="sidebar-nav-item-list " href="http://ioos.github.io/conventions-for-observing-asset-identifiers/ioos_assets_wiki_upd_v0_8_draft/">IOOS Convention for Asset Identification (next draft)</a>
       
     
 </p>
@@ -92,7 +96,7 @@
 
 
 <div class="post">
-  <h1 class="post-title">IOOS Convention for Asset Identification</h1>
+  <h1 class="post-title">IOOS Convention for Asset Identification (current version)</h1>
     <div id="toc" class="well col-md-4 col-sm-6">
     <nav id="TableOfContents">
 <ul>
@@ -121,11 +125,8 @@
 <li><a href="#survey-identifiers:ebe5944de060b6752ee4a92e470e3ed5">Survey Identifiers</a></li>
 <li><a href="#visual-observations-from-ships:ebe5944de060b6752ee4a92e470e3ed5">Visual Observations from Ships</a>
 <ul>
-<li>
-<ul>
-<li><a href="#1-general-observing-protocol:ebe5944de060b6752ee4a92e470e3ed5"><em>(1) General observing protocol</em></a></li>
-<li><a href="#2-specific-type-of-observation:ebe5944de060b6752ee4a92e470e3ed5"><em>(2) Specific type of observation</em></a></li>
-</ul></li>
+<li><a href="#general-observing-protocol:ebe5944de060b6752ee4a92e470e3ed5">General observing protocol</a></li>
+<li><a href="#specific-type-of-observation:ebe5944de060b6752ee4a92e470e3ed5">Specific type of observation</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#references:ebe5944de060b6752ee4a92e470e3ed5">References</a></li>
@@ -134,7 +135,7 @@
     </div>
   
 
-<p><em>Many assets have numbers or labels assigned to them by an external authority. For example, every weather buoy has a World Meteorological Organization (WMO) number. The IOOS identifiers allow for and make use of such identifiers. However, rather than merely using the number (e.g., 42001) which could refer to a buoy in the Gulf of Mexico or the postal code for Paducah, Kentucky or the section of the California Vehicle Code that describes fines imposed for moving violations, the IOOS identifiers add some semantics to indicate (a) the authority which assigned the number or name and (b) that the asset is somehow associated with IOOS. Being &ldquo;associated with IOOS&rdquo; in this context typically means that data from that asset could be discovered or accessed through the IOOS data management layer.</em></p>
+<p><em>This document provides a guidance for the asset identification process. For the data to be discoverable and accessible through the IOOS Data Catalog, all observing assets must be identified in accord with the present IOOS Convention.</em></p>
 
 <p><br><br></p>
 
@@ -164,7 +165,7 @@
 </tbody>
 </table>
 
-<p><p style="color:red; font-size:120%; border:3px solid red; padding:15px;"> This is a bit &ldquo;combed&rdquo; INITIAL version of the document; needs further edition and format.<br>The <a href="https://github.com/ioos/conventions-for-observing-asset-identifiers/blob/master/doc/ioos_assets_wiki_upd_v0_5_draft.md">UPDATED version of the Convention for the framework of IOOS SOS Milestone 1.0</a> has been considered a DISCUSSION PAPER until approval. </p>
+<p><p style="color:red; font-size:120%; border:3px solid red; padding:15px;"> This is a bit &ldquo;combed&rdquo; INITIAL version of the document; needs further edition and format.<br>The <a href="https://github.com/ioos/conventions-for-observing-asset-identifiers/blob/master/doc/ioos_assets_wiki_upd_v0_8_draft.md">UPDATED version of the Convention for the framework of IOOS SOS Milestone 1.0</a> has been considered a DISCUSSION PAPER until approval. </p>
 <p>
 <br></p>
 
@@ -273,7 +274,7 @@
 
 <p><em><strong>NOTE</strong>: IOOS intended to formally register the <strong>ioos</strong> namespace with IANA, but has not done it yet (2010-12-22) has not.</em></p>
 
-<p>The additional fields may only include letters and numbers (<em><strong>A-Z</strong></em>, <em><strong>a-z</strong></em>, <em><strong>0-9</strong></em>) and the following characters: <em><strong>( ) + , - . = @ ; $ _ ! </strong>*</em></p>
+<p>The additional fields may only include letters and numbers (<em><strong>A-Z</strong></em>, <em><strong>a-z</strong></em>, <em><strong>0-9</strong></em>) and the following characters: _<strong>( ) + , - . = @ ; $ _ ! *</strong>_</p>
 
 <p>Special characters not in the foregoing list must be represented using hexadecimal encoding as <em><strong>%xx</strong></em>, where <strong>xx</strong> represents a two-digit hex value. The use of such characters in IOOS URNs is not recommended.
 <br></p>
@@ -297,7 +298,7 @@
 <p>a fixed string indicating this is an IOOS URN;</p>
 </blockquote>
 
-<p><em><strong>asset_type</strong></em></p>
+<p>_<strong>asset_type</strong>_</p>
 
 <blockquote>
 <p>a variable indicating the type of asset being identified;</p>
@@ -326,7 +327,7 @@
 
 <h3 id="asset-type:ebe5944de060b6752ee4a92e470e3ed5">Asset Type</h3>
 
-<p>The <em><strong>asset_type</strong></em> field indicates the type of asset to which this identifier applies. The following values for <em><strong>asset_type</strong></em> are recognized by IOOS:</p>
+<p>The _<strong>asset_type</strong>_ field indicates the type of asset to which this identifier applies. The following values for _<strong>asset_type</strong>_ are recognized by IOOS:</p>
 
 <p><strong>station</strong></p>
 
@@ -355,7 +356,7 @@
 Example: a quarterly visit to a known location to collect water for chemical analysis; an assessment by a diver of the species present in a particular location, etc.</p>
 </blockquote>
 
-<p>Additional <em><strong>asset_type</strong></em> values may be added by IOOS as needed.  Candidate controlled vocabularies that may be adopted as the valid values in the <em><strong>asset_type</strong></em> field are:
+<p>Additional _<strong>asset_type</strong>_ values may be added by IOOS as needed.  Candidate controlled vocabularies that may be adopted as the valid values in the _<strong>asset_type</strong>_ field are:
 * <a href="http://mmisw.org/orr/#http://mmisw.org/ont/mmi/device">Marine Metadata Initiative Device Ontology</a>
 * <a href="http://mmisw.org/orr/#http://vocab.ndg.nerc.ac.uk/list/L221/current">BODC Instruments List</a>
 * <a href="http://gcmdservices.gsfc.nasa.gov/static/kms/instruments/instruments.csv">GCMD Instrument types</a>
@@ -430,13 +431,13 @@ Platform identifiers do not include a <em><strong>component</strong></em> field.
 
 <p>The pattern for IOOS sensor identifiers may be either</p>
 
-<p><em><strong>urn:ioos:sensor:authority:label_sensor[:version]</strong></em></p>
+<p>_<strong>urn:ioos:sensor:authority:label_sensor[:version]</strong>_</p>
 
 <p>or</p>
 
-<p><em><strong>urn:ioos:station:authority:label_station:component[:version]</strong></em></p>
+<p>_<strong>urn:ioos:station:authority:label_station:component[:version]</strong>_</p>
 
-<p>Depending on the option, sensor is identified either by its <em><strong>label_sensor</strong></em>, or by a station <em><strong>component</strong></em> field, which provides a name for the sensor.  The specific names are at the discretion of the organization operating the sensor or the service to access data from the sensor. The <em><strong>component</strong></em> and <em><strong>label_sensor</strong></em> values may vary for the same sensor, and may reflect the make and model of the sensor (e.g., &ldquo;SONTEK-ADP-419&rdquo;), the phenomenon observed by that sensor (e.g., &ldquo;salinity&rdquo;), or an arbitrary label used by the organization (e.g., &ldquo;A1&rdquo;). The name may not include characters not allowed in Section 3.1.
+<p>Depending on the option, sensor is identified either by its _<strong>label_sensor</strong>_, or by a station <em><strong>component</strong></em> field, which provides a name for the sensor.  The specific names are at the discretion of the organization operating the sensor or the service to access data from the sensor. The <em><strong>component</strong></em> and _<strong>label_sensor</strong>_ values may vary for the same sensor, and may reflect the make and model of the sensor (e.g., &ldquo;SONTEK-ADP-419&rdquo;), the phenomenon observed by that sensor (e.g., &ldquo;salinity&rdquo;), or an arbitrary label used by the organization (e.g., &ldquo;A1&rdquo;). The name may not include characters not allowed in Section 3.1.
 <br></p>
 
 <h3 id="version:ebe5944de060b6752ee4a92e470e3ed5">Version</h3>
@@ -456,11 +457,11 @@ Platform identifiers do not include a <em><strong>component</strong></em> field.
 
 <p>I think it would be good to also indicate either (1) the general observing protocol or (2) the specific type of observation, as follows: </p>
 
-<h4 id="1-general-observing-protocol:ebe5944de060b6752ee4a92e470e3ed5"><em>(1) General observing protocol</em></h4>
+<h3 id="general-observing-protocol:ebe5944de060b6752ee4a92e470e3ed5">General observing protocol</h3>
 
 <p>If visual estimates are made according to, for example, the <a href="http://www.vos.noaa.gov/ObsHB-508/ObservingHandbook1_2004_508_compliant.pdf">NWS Observing Handbook No. 1 (2004)</a>, then perhaps the so-called “sensor” ID could be something like </p>
 
-<p><em><strong><a href="urn:ioos:observer:nws_observing_handbook:2004">urn:ioos:observer:nws_observing_handbook:2004</a></strong></em></p>
+<p>_<strong><a href="urn:ioos:observer:nws_observing_handbook:2004">urn:ioos:observer:nws_observing_handbook:2004</a></strong>_</p>
 
 <p>Indeed, instead of inventing our own URI for this case perhaps we should just insert the URL of the observing protocol: </p>
 
@@ -468,7 +469,7 @@ Platform identifiers do not include a <em><strong>component</strong></em> field.
 
 <p>This avoids any need for additional interpretation. In the IOOS water quality project we have seen another case where the “metadata” about the measurement procedure is a PDF file containing descriptions of laboratory procedures. </p>
 
-<h4 id="2-specific-type-of-observation:ebe5944de060b6752ee4a92e470e3ed5"><em>(2) Specific type of observation</em></h4>
+<h3 id="specific-type-of-observation:ebe5944de060b6752ee4a92e470e3ed5">Specific type of observation</h3>
 
 <p>The identifier could include the type of observation made by the human. </p>
 
@@ -478,12 +479,12 @@ Platform identifiers do not include a <em><strong>component</strong></em> field.
 
 <p>as the “sensor” ID for such an observation.  Or, we could be less cryptic (since we are not so bandwidth-constrained these days) and expand that out: </p>
 
-<p><em><strong><a href="urn:ioos:observer:wind_speed_indicator:estimated_in_knots">urn:ioos:observer:wind_speed_indicator:estimated_in_knots</a></strong></em></p>
+<p>_<strong><a href="urn:ioos:observer:wind_speed_indicator:estimated_in_knots">urn:ioos:observer:wind_speed_indicator:estimated_in_knots</a></strong>_</p>
 
 <p>Similarly, from p.2-76, sea surface temperature measurement could use </p>
 
 <p><em><strong><a href="urn:ioos:observer:ss:1">urn:ioos:observer:ss:1</a></strong></em>
-<em><strong><a href="urn:ioos:observer:sst_indicator:negative_intake_measurement">urn:ioos:observer:sst_indicator:negative_intake_measurement</a></strong></em></p>
+_<strong><a href="urn:ioos:observer:sst_indicator:negative_intake_measurement">urn:ioos:observer:sst_indicator:negative_intake_measurement</a></strong>_</p>
 
 <p>Personally, I think the cryptic VOS codes could be recorded as-is in the DB because that is presumably what you’re getting on input, and then on output they could be converted to something more readable. </p>
 
