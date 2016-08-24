@@ -750,6 +750,18 @@ Examples include: a water-level sensor; a temperature sensor; an anemometer; a c
 
 &lt;p&gt;Station identifiers do not include a &lt;strong&gt;&lt;code&gt;component&lt;/code&gt;&lt;/strong&gt; field but may include a &lt;strong&gt;&lt;code&gt;discriminant&lt;/code&gt;&lt;/strong&gt; to identify, for example, a relocation of a mooring buoy or redeployment to the same location after sensor replacement.&lt;/p&gt;
 
+&lt;h2 id=&#34;glider-identifiers:0476a3a1fa6c1e924774e451ea0e88d7&#34;&gt;Glider Identifiers&lt;/h2&gt;
+
+&lt;p&gt;The pattern for IOOS glider identifiers is similar to the station identifier&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;strong&gt;&lt;code&gt;urn:ioos:glider:authority:label[:discriminant]&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;As the same glider is typically associated with multiple deployments, the &lt;strong&gt;&lt;code&gt;discriminant&lt;/code&gt;&lt;/strong&gt; field in the glider&amp;rsquo;s identifier adds unique information about each deployment like a deployment number, time, starting point coordinates, etc.; the complete identifier will allow unambiguous resolution of any of the glider&amp;rsquo;s missions.&lt;/p&gt;
+
+&lt;p&gt;Since no field can contain a colon (&lt;strong&gt;&lt;code&gt;&amp;quot;:&amp;quot;&lt;/code&gt;&lt;/strong&gt;), the date/time information cannot be reported in the ISO 8601 format, and  has to be provided in &lt;strong&gt;YYYYmmddTHHMM&lt;/strong&gt; format, where &lt;strong&gt;&amp;ldquo;YYYYmmdd&amp;rdquo;&lt;/strong&gt; depicts a deployment year, month and day, &lt;strong&gt;&amp;ldquo;HHMM&amp;rdquo;&lt;/strong&gt; identifies a specific time, and &lt;strong&gt;&amp;ldquo;T&amp;rdquo;&lt;/strong&gt; separates date and time fields, e.g.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;strong&gt;&lt;code&gt;urn:ioos:glider:edu.rutgers.marine:unit_191:20150105T1443&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
+
 &lt;h2 id=&#34;sensor-identifiers:0476a3a1fa6c1e924774e451ea0e88d7&#34;&gt;Sensor Identifiers&lt;/h2&gt;
 
 &lt;p&gt;For the purpose of this Convention, the sensors are always associated with a certain station, and are used to measure one or more observed quantities at or adjacent to the station location. The pattern for IOOS sensor identifiers is&lt;/p&gt;
@@ -769,18 +781,6 @@ Examples include: a water-level sensor; a temperature sensor; an anemometer; a c
 &lt;/ul&gt;
 
 &lt;p&gt;The &lt;strong&gt;&lt;code&gt;functional_parameters&lt;/code&gt;&lt;/strong&gt; field allows distinguishing of the measurements done by the same sensor but associated with different reference parameters or post-processing methods as described in the &lt;a href=&#34;#anchor2&#34;&gt;&amp;ldquo;Functional Parameters&amp;rdquo;&lt;/a&gt; section above.&lt;/p&gt;
-
-&lt;h3 id=&#34;glider-identifier:0476a3a1fa6c1e924774e451ea0e88d7&#34;&gt;Glider Identifier&lt;/h3&gt;
-
-&lt;p&gt;The pattern for IOOS glider identifiers is similar to the station one&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;strong&gt;&lt;code&gt;urn:ioos:station:authority:label[:discriminant]&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;As the same glider is typically associated with multiple deployments, the &lt;strong&gt;&lt;code&gt;discriminant&lt;/code&gt;&lt;/strong&gt; field in the glider&amp;rsquo;s identifier adds unique information about each deployment like a deployment number, time, starting point coordinates, etc.; the complete identifier will allow unambiguous resolution of any of the glider&amp;rsquo;s missions.&lt;/p&gt;
-
-&lt;p&gt;Since no field can contain &lt;strong&gt;&lt;code&gt;:&lt;/code&gt;&lt;/strong&gt;, the date/time information cannot be reported in the ISO 8601 format, and  has to be provided in &lt;em&gt;&lt;strong&gt;YYYYMMDDTHHMM&lt;/strong&gt;&lt;/em&gt; format, e.g.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;urn:ioos:glider:edu.rutgers.marine:unit_191:20150105T1443&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;survey-identifiers:0476a3a1fa6c1e924774e451ea0e88d7&#34;&gt;Survey Identifiers&lt;/h2&gt;
 

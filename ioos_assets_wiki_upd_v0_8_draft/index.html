@@ -121,10 +121,8 @@
 <li><a href="#convention-for-specific-asset-types:0476a3a1fa6c1e924774e451ea0e88d7">Convention for Specific Asset Types</a>
 <ul>
 <li><a href="#station-identifiers:0476a3a1fa6c1e924774e451ea0e88d7">Station Identifiers</a></li>
-<li><a href="#sensor-identifiers:0476a3a1fa6c1e924774e451ea0e88d7">Sensor Identifiers</a>
-<ul>
-<li><a href="#glider-identifier:0476a3a1fa6c1e924774e451ea0e88d7">Glider Identifier</a></li>
-</ul></li>
+<li><a href="#glider-identifiers:0476a3a1fa6c1e924774e451ea0e88d7">Glider Identifiers</a></li>
+<li><a href="#sensor-identifiers:0476a3a1fa6c1e924774e451ea0e88d7">Sensor Identifiers</a></li>
 <li><a href="#survey-identifiers:0476a3a1fa6c1e924774e451ea0e88d7">Survey Identifiers</a>
 <ul>
 <li><a href="#general-observing-protocol:0476a3a1fa6c1e924774e451ea0e88d7">General observing protocol</a></li>
@@ -478,6 +476,18 @@ Examples include: a water-level sensor; a temperature sensor; an anemometer; a c
 
 <p>Station identifiers do not include a <strong><code>component</code></strong> field but may include a <strong><code>discriminant</code></strong> to identify, for example, a relocation of a mooring buoy or redeployment to the same location after sensor replacement.</p>
 
+<h2 id="glider-identifiers:0476a3a1fa6c1e924774e451ea0e88d7">Glider Identifiers</h2>
+
+<p>The pattern for IOOS glider identifiers is similar to the station identifier</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><code>urn:ioos:glider:authority:label[:discriminant]</code></strong>.</p>
+
+<p>As the same glider is typically associated with multiple deployments, the <strong><code>discriminant</code></strong> field in the glider&rsquo;s identifier adds unique information about each deployment like a deployment number, time, starting point coordinates, etc.; the complete identifier will allow unambiguous resolution of any of the glider&rsquo;s missions.</p>
+
+<p>Since no field can contain a colon (<strong><code>&quot;:&quot;</code></strong>), the date/time information cannot be reported in the ISO 8601 format, and  has to be provided in <strong>YYYYmmddTHHMM</strong> format, where <strong>&ldquo;YYYYmmdd&rdquo;</strong> depicts a deployment year, month and day, <strong>&ldquo;HHMM&rdquo;</strong> identifies a specific time, and <strong>&ldquo;T&rdquo;</strong> separates date and time fields, e.g.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><code>urn:ioos:glider:edu.rutgers.marine:unit_191:20150105T1443</code></strong>.</p>
+
 <h2 id="sensor-identifiers:0476a3a1fa6c1e924774e451ea0e88d7">Sensor Identifiers</h2>
 
 <p>For the purpose of this Convention, the sensors are always associated with a certain station, and are used to measure one or more observed quantities at or adjacent to the station location. The pattern for IOOS sensor identifiers is</p>
@@ -497,18 +507,6 @@ Examples include: a water-level sensor; a temperature sensor; an anemometer; a c
 </ul>
 
 <p>The <strong><code>functional_parameters</code></strong> field allows distinguishing of the measurements done by the same sensor but associated with different reference parameters or post-processing methods as described in the <a href="#anchor2">&ldquo;Functional Parameters&rdquo;</a> section above.</p>
-
-<h3 id="glider-identifier:0476a3a1fa6c1e924774e451ea0e88d7">Glider Identifier</h3>
-
-<p>The pattern for IOOS glider identifiers is similar to the station one</p>
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><code>urn:ioos:station:authority:label[:discriminant]</code></strong>.</p>
-
-<p>As the same glider is typically associated with multiple deployments, the <strong><code>discriminant</code></strong> field in the glider&rsquo;s identifier adds unique information about each deployment like a deployment number, time, starting point coordinates, etc.; the complete identifier will allow unambiguous resolution of any of the glider&rsquo;s missions.</p>
-
-<p>Since no field can contain <strong><code>:</code></strong>, the date/time information cannot be reported in the ISO 8601 format, and  has to be provided in <em><strong>YYYYMMDDTHHMM</strong></em> format, e.g.</p>
-
-<p><strong><code>urn:ioos:glider:edu.rutgers.marine:unit_191:20150105T1443</code></strong>.</p>
 
 <h2 id="survey-identifiers:0476a3a1fa6c1e924774e451ea0e88d7">Survey Identifiers</h2>
 
