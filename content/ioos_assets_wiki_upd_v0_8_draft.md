@@ -217,6 +217,18 @@ The pattern for IOOS platform (station) identifiers is
 
 Station identifiers do not include a **`component`** field but may include a **`discriminant`** to identify, for example, a relocation of a mooring buoy or redeployment to the same location after sensor replacement.
 
+## Glider Identifiers
+
+The pattern for IOOS glider identifiers is similar to the station identifier
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **`urn:ioos:glider:authority:label[:discriminant]`**. 
+
+As the same glider is typically associated with multiple deployments, the **`discriminant`** field in the glider's identifier adds unique information about each deployment like a deployment number, time, starting point coordinates, etc.; the complete identifier will allow unambiguous resolution of any of the glider's missions.
+
+Since no field can contain a colon (**`":"`**), the date/time information cannot be reported in the ISO 8601 format, and  has to be provided in **YYYYmmddTHHMM** format, where **"YYYYmmdd"** depicts a deployment year, month and day, **"HHMM"** identifies a specific time, and **"T"** separates date and time fields, e.g. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **`urn:ioos:glider:edu.rutgers.marine:unit_191:20150105T1443`**. 
+
 ## Sensor Identifiers
 
 For the purpose of this Convention, the sensors are always associated with a certain station, and are used to measure one or more observed quantities at or adjacent to the station location. The pattern for IOOS sensor identifiers is
@@ -234,18 +246,6 @@ The **`discriminant`** field provides for unique identification of multiple sens
  - **`urn:ioos:station:authority:label_station:sea_water_temperature:nortek_adp_514`**
 
 The **`functional_parameters`** field allows distinguishing of the measurements done by the same sensor but associated with different reference parameters or post-processing methods as described in the ["Functional Parameters"](#anchor2) section above.
-
-### Glider Identifier
-
-The pattern for IOOS glider identifiers is similar to the station one
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **`urn:ioos:station:authority:label[:discriminant]`**. 
-
-As the same glider is typically associated with multiple deployments, the **`discriminant`** field in the glider's identifier adds unique information about each deployment like a deployment number, time, starting point coordinates, etc.; the complete identifier will allow unambiguous resolution of any of the glider's missions.
-
-Since no field can contain **`:`**, the date/time information cannot be reported in the ISO 8601 format, and  has to be provided in _**YYYYMMDDTHHMM**_ format, e.g. 
-
-**`urn:ioos:glider:edu.rutgers.marine:unit_191:20150105T1443`**. 
 
 ## Survey Identifiers
 
