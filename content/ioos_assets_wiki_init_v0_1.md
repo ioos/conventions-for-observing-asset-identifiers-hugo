@@ -1,14 +1,15 @@
 +++
 draft = false
-title = "IOOS Convention for Asset Identification (current version)"
+title = "IOOS Convention for Asset Identification v0.1"
+description = "INITIAL VERSION"
 type = "post"
 date = 2014-08-04T08:10:23Z
 sidebar = true
-weight = "20"
+weight = "90"
 +++
 
 
-_This document provides a guidance for the asset identification process. For the data to be discoverable and accessible through the IOOS Data Catalog, all observing assets must be identified in accord with the present IOOS Convention._
+_Initial version of the guidance for the asset identification process. For the data to be discoverable and accessible through the IOOS Data Catalog, all observing assets must be identified in accord with the present IOOS Convention.<br><b>DEPRECATED. </b>_
 <!--more-->
 <br><br>
 
@@ -18,11 +19,11 @@ _This document provides a guidance for the asset identification process. For the
 
 | Version | Description | Date |
 |---------|-------------|----- |
-|0.0.1|First draft.|2010-12-22 |
-|0.1.0  |Updated draft|2013-12-06 | |
+| 0.0.1 | First draft | 2010-12-22 |
+| 0.1 | Streamlined and cleaned up draft | 2013-12-06 |
 
 
-<p style="color:red; font-size:120%; border:3px solid red; padding:15px;"> This is a bit "combed" INITIAL version of the document; needs further edition and format.<br>The [UPDATED version of the Convention for the framework of IOOS SOS Milestone 1.0](https://github.com/ioos/conventions-for-observing-asset-identifiers/blob/master/doc/ioos_assets_wiki_upd_v0_8_draft.md) has been considered a DISCUSSION PAPER until approval. </p>
+<p style="color:red; font-size:120%; border:3px solid red; padding:15px;"> DISCLAIMER: This is an <b>OBSOLETE</b> initial version of the document that was <b>DEPRECATED</b> as an official IOOS document. <br>Please <b>DO NOT</b> refer to this publication.</p>
 <p>
 <br>
 
@@ -35,6 +36,11 @@ _This document provides a guidance for the asset identification process. For the
 |Carmel Ortiz | Contributor | U.S. IOOS Office | 
 |Alex Birger | Contributor | U.S. IOOS Office |
 |Anna Milan | Contributor | NOAA National Geophysical Data Center (NGDC) |
+
+
+# References
+
+[**IETF RFC 2141**](http://tools.ietf.org/html/rfc2141-http://tools.ietf.org/html/rfc2141)
 
 <br>
 <br>
@@ -251,14 +257,8 @@ Personally, I think the cryptic VOS codes could be recorded as-is in the DB beca
 
 I don’t know whether (1) or (2) or neither is best. I’m assuming that some data users need to know information like iw=3 and ss=1.
 
-References
-==========
-
-[IETF RFC 2141](http://tools.ietf.org/html/rfc2141-http://tools.ietf.org/html/rfc2141)
 
 
  
 
-<Category:Integrated_Ocean_Observing_System_(IOOS)>
-<Category:IOOS_Guidelines>
 

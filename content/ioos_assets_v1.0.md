@@ -1,15 +1,15 @@
 +++
 draft = false
-title = "IOOS Convention for Asset Identification (next draft)"
-description = "bla-bla-bla"
+title = "IOOS Convention for Asset Identification v1.0"
+description = "ACTIVE VERSION"
 type = "post"
 date = 2016-07-04T08:10:23Z
 sidebar = true
-weight = "30"
+weight = "20"
 +++
 
 
-_This <b>DRAFT</b> document is a proposed update to the current IOOS Convention for Asset Identification; it is published for discussion within IOOS community about the enhanced identification of <b>gliders</b>, and <b>sensors</b>._
+_This is the current valid version of the IOOS Convention for Asset Identification that was initially adopted in 2013; apart from multiple editorial corrections, it provides the enhanced identification of <b>gliders</b>, and <b>sensors</b> as a result of intensive discussions within IOOS community._
 <!--more-->
 <br><br>
 
@@ -19,9 +19,9 @@ _This <b>DRAFT</b> document is a proposed update to the current IOOS Convention 
 | Version | Description | Date  |
 |:--- |:--- |:--- |
 | 0.0.1 | First draft | 2010-12-22 |
-| 0.1 | Updated draft | 2013-12-06 |
-| 0.5 | Updated for Milestone 1.0| 2014-08-31 |
-| 0.8 | Updated to enhance sensor identification| 2016-07-15 |
+| 0.1 | Streamlined and cleaned up draft | 2013-12-06 |
+| 0.5 | Fixed typos and minor editing for Milestone 1.0 | 2014-08-31 |
+| 1.0 | Provides major update to the glider and sensor identification| 2016-07-15 |
 
 
 # Contributors
@@ -34,11 +34,13 @@ _This <b>DRAFT</b> document is a proposed update to the current IOOS Convention 
 |Alex Birger | Contributor | U.S. IOOS Office |
 |Anna Milan | Contributor | NOAA National Geophysical Data Center (NGDC) |
 
-<br>
-<br>
 
-<p style="color:red; font-size:150%; border:3px solid red; padding:15px;"> <b>DISCLAIMER:</b> This publication is a <b>Discussion Paper</b>, and by no means it should be referred to as an official IOOS document. </p>
-<p>
+# References
+
+  1. [**IETF RFC 2141**](http://tools.ietf.org/html/rfc2141-http://tools.ietf.org/html/rfc2141)
+  2. [Previous version of the Convention](../ioos_assets_wiki_upd_v0_5_draft/)
+
+<br>
 <br>
 
 # Introduction
@@ -68,10 +70,11 @@ For the sake of illustration, the following examples of identifiers are currentl
 |Water level sensor at CO-OPS station 8454000 | **`urn:ioos:sensor:NOAA.NOS.CO-OPS:8454000:D1`** |
 |Nortek Acoustic Doppler Profiler sensor that is measuring water currents and/or waves and is mounted on the CO-OPS cb0201 station | **`urn:ioos:sensor:NOAA.NOS.CO-OPS:cb0201:Nortek-ADP-514`** |
 
+<br>
+
 # General Identifier Convention
 
-<a name="anchor1"></a><br>
-
+<a name="anchor1"></a>
 ## Use of Uniform Resource Names 
 
 An IOOS identifier is [Uniform Resource Identifier (URI)](https://www.ietf.org/rfc/rfc3986.txt). URIs are commonly used as identifiers in the Internet’s information architecture; an introductory description of URIs may be found on
@@ -188,8 +191,9 @@ The **`component`** field is used to label sub-assets in order to distinguish be
 
 ### Discriminant
 
-The **`discriminant`** field is a free-format text string that provides an additional means for resolving duplication of assets or sub-assets that may result from multiple deployments of the same asset, use of multiple identical sub-assets (e.g. sensors) at the same parent asset (e.g. station). The **`discriminant`** ensures the uniqueness of the multiple (sub-)asset's identifiers within the single asset's domain.<a name="anchor2"></a><br>
+The **`discriminant`** field is a free-format text string that provides an additional means for resolving duplication of assets or sub-assets that may result from multiple deployments of the same asset, use of multiple identical sub-assets (e.g. sensors) at the same parent asset (e.g. station). The **`discriminant`** ensures the uniqueness of the multiple (sub-)asset's identifiers within the single asset's domain.
 
+<a name="anchor2"></a>
 ### Functional Parameters
 
 The optional **`functional_parameters`** field provides extended metadata that depicts various processes associated with the component. Adding this metadata allows unambiguous identification of the data that is collected through the measurement of the identical phenomenon at the same station with different reference datums or post-processing methods. Although this field is not required, in cases like these it is the only way to identify the data that is normally impossible to represent without additional parameters. The functional parameters are especially valuable for conversing the netCDF attributes to IOOS SOS XML representation. 
@@ -206,6 +210,8 @@ Examples of the **`functional_parameters`** field values:
 Various parameters may be combined in one **`functional_parameters`** field, e.g.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **`#vertical_datum=mllw;cell_methods=time:mean;interval=pt12h`** (MLLW datum; mean over 12 hours processing)
+
+<br>
 
 # Convention for Specific Asset Types
 
